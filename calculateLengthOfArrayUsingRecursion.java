@@ -4,6 +4,8 @@ public class Main {
             return 0;
         }
         return 1+calculateLength(arr, i+1);
+        
+        
     }
   
     public static void main(String args[]) {
