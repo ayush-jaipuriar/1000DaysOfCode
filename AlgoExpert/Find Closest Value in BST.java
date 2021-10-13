@@ -34,4 +34,24 @@ class FindClosestValueInBSTRecursive {
             return closest;
         }
     }
+
+    // This is the more space efficient than recursive method ( O(1) over O(n) in worst case), TC remains same as recursive
+    static int findClosestValueInBstIterative(BST tree, int target) {
+        BST currentNode = tree;
+        // Worst Case : TC = O(n) for entirely left/right skewed tree and O(1) space since we are not creating any new stack frames
+        // Avg Case : TC = O(log n) and O(1) space
+        while (currentNode != null) {
+            if (Math.abs(target - currentNode.value) < Math.abs(target - closest)) {
+                closest = currentNode.value;
+            }
+            if (target < currentNode.value) {
+                currentNode = currentNode.left;
+            } else if (target > currentNode.value) {
+                currentNode = currentNode.right;
+            } else {
+                break;
+            }
+        }
+        return closest;
+    }
 }
