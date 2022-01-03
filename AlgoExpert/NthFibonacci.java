@@ -1,5 +1,5 @@
 public class NthFibonacci {
-	
+
 	public static int getNthFib(int n) {
 		// Iterative Solution, best approach
 		// Time Complexity : O(n)
@@ -30,5 +30,5 @@ public class NthFibonacci {
 		}
 		return getNthFibRecursive(n - 1) + getNthFibRecursive(n - 2);
 	}
-	
+
 }
