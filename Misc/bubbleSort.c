@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void swap(int *xp, int *yp) 
-{ 
+void swap(int *xp, int *yp) { 
     int temp = *xp; 
     *xp = *yp; 
     *yp = temp; 
