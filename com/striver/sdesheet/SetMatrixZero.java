@@ -38,7 +38,7 @@ public class SetMatrixZero {
 
         for (int i=0; i<m; i++) {
             for (int j=0; j<n; j++) {
-                if (zeroRows[i] == true || zeroColumns[j] == true) {
+                if (zeroRows[i] || zeroColumns[j]) {
                     matrix[i][j] = 0;
                 }
             }
