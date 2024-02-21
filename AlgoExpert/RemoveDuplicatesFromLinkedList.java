@@ -15,16 +15,24 @@ class RemoveDuplicatesFromLinkedList {
 	// Space Complexity : O(1). 
 	// n being the number of nodes in the linked list
 	
+
 	public LinkedList removeDuplicatesFromLinkedList(LinkedList linkedList) {
 		LinkedList currentNode = linkedList;
-		while (currentNode != null) {
-			LinkedList nextUniqueNode = currentNode.next;
-			while (nextUniqueNode != null && nextUniqueNode.value == currentNode.value) {
-				nextUniqueNode = nextUniqueNode.next;
-			}
-			currentNode.next = nextUniqueNode;
-			currentNode = nextUniqueNode;
-		}
-		return currentNode;
+		// Loooping through the entire linked list
+		while (currentNode!= null) {
+		  LinkedList nextNode = currentNode.next;
+		  // We loop through the linked list till we get our first non duplicate value
+		  while (nextNode != null && currentNode.value == nextNode.value) {
+			nextNode = nextNode.next;
+		  }
+		  // We are currently at a non duplicate nodem
+		  // So we set the next node of currentNode as nextNode
+		  // And we now to progress the linkedin traversal,
+		  // we set the currentNode as nextNode
+		  currentNode.next = nextNode;
+		  currentNode = nextNode;
+		}  
+		return linkedList;
+	  };
 	}
 }
