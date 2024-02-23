@@ -1,6 +1,7 @@
 import java.util.*;
 
 class Program {
+  
   public int optimalFreelancing(Map<String, Integer>[] jobs) {
     // Initialize a constant for max days in a week
     int MAX_DAYS_OF_WEEK = 7;
