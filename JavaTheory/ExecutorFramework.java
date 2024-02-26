@@ -57,9 +57,27 @@ public class ExecutorFramework {
         }
 
 
-        
+        // Using ThreadPool to demonstrate the benefits of Thread Pool for executing more than 1 tasks
+        ExecutorService executor3 = Executors.newFixedThreadPool(5);
+        for (int i=0; i<10; i++) {
+            executor3.submit(() -> {
+                System.out.println("Task being executed by a thread in the thread pool by thread");
+                System.out.println("Thread ID: " + Thread.currentThread().getId());
+            });
+        }
 
 
+        // Handling task cancellation in the Executor Framework
+        ExecutorService executor5 = Executors.newFixedThreadPool(1);
+        Future<Integer> finalResult = executor5.submit(() -> {
+            Thread.sleep(5000);
+            return 42;
+        });
+        boolean cancelled = finalResult.cancel(true);
+        if (cancelled) {
+            System.out.println("The task was cancelled midway before it could complete execution");
+        }
+        executor5.shutdown();
     }
 
 }
