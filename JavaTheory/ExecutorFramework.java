@@ -1,7 +1,7 @@
 package JavaTheory;
 
+import java.util.concurrent.Callable;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -37,6 +37,27 @@ public class ExecutorFramework {
         CompletableFuture<Integer> completableFuture = CompletableFuture.supplyAsync(()-> 42);
         completableFuture.thenApply(result -> result / 2);
         completableFuture.thenAccept(System.out::println);
+
+
+        // Difference between Runnable and Callable task
+        Runnable runnableTask = ()-> System.out.println("Runnable task");
+        Callable<Integer> callableTask = () -> {
+            System.out.println("Callable Task");
+            return 42;
+        };
+        ExecutorService executor2 = Executors.newFixedThreadPool(2);
+        executor2.submit(runnableTask);
+        executor2.submit(callableTask);
+        executor2.shutdown();
+        try {
+            System.out.println("Callable value : " + callableTask.call());
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+
+        
 
 
     }
