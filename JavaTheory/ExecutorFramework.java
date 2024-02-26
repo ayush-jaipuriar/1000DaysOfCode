@@ -1,5 +1,6 @@
 package JavaTheory;
 
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -30,6 +31,13 @@ public class ExecutorFramework {
         } finally {
             executor.shutdown();
         }
+
+
+        // CompletableFuture Example for handling async tasks
+        CompletableFuture<Integer> completableFuture = CompletableFuture.supplyAsync(()-> 42);
+        completableFuture.thenApply(result -> result / 2);
+        completableFuture.thenAccept(System.out::println);
+
 
     }
 
