@@ -5,7 +5,6 @@ import java.util.concurrent.Executors;
 
 public class ExecutorFrameworkSharedResource {
     private static int counter = 0;
-
     public static void main(String[] args) {
         ExecutorService executor = Executors.newFixedThreadPool(5);
 
