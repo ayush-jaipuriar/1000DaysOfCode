@@ -10,6 +10,7 @@ class Program {
         public BinaryTree(int value) {
             this.value = value;
         }
+        
     }
 
     public int evaluateExpressionTree(BinaryTree tree) {
