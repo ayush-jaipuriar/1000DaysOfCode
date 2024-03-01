@@ -3,6 +3,7 @@ public class BinarySearch {
 	public static int binarySearch(int[] array, int target) {
 		// Time Complexity : O(n log n)
 		// Space Complexity : O(1)
+		
 		int n = array.length;
 		int start = 0;
 		int end = n - 1;
