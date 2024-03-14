@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -49,5 +50,15 @@ public class Lambdas {
         List<Integer> evenNumberList = numbersList.stream().filter(evenCheckPredicate).collect(Collectors.toList());
         numbersList.stream().filter(evenCheckPredicate).forEach(System.out::println);
         System.out.println(evenNumberList.toString());
+
+
+        Function<Integer, Integer> doubleIt = (a) -> a*2;
+        int originalNumber = 2;
+        System.out.println("Original Number before calling doubleIt function interface : " + originalNumber);
+        int doubledNumber = doubleIt.apply(originalNumber);
+        System.out.println("Doubled Number after calling doubleIt function interface : " + doubledNumber);
+        
+
+        
     }
 }
