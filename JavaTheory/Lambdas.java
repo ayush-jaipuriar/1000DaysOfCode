@@ -3,6 +3,7 @@ package JavaTheory;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 public class Lambdas {
@@ -24,6 +25,10 @@ public class Lambdas {
         System.out.println("Atomic Counter value before increment : " + atomicCounter.get());
         atomicCounter.getAndIncrement();
         System.out.println("Atomic Counter value after increment : " + atomicCounter.get());
+
+        Consumer<String> logMessage = (msg) -> System.out.println("LOG Message : " + msg);
+        logMessage.accept("Hello World");
+
 
 
     }
