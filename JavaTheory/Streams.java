@@ -2,6 +2,7 @@ package JavaTheory;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class Streams {
@@ -19,10 +20,10 @@ public class Streams {
 
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
 
-        numbers.stream()
+        Optional<Integer> firstEven = numbers.stream()
                 .filter(n -> n % 2 == 0) // Intermediate (lazy)
                 .map(n -> n * 2) // Intermediate (lazy)
                 .findFirst(); // Terminal - triggers computation
-
+        System.out.println(firstEven.get());
     }
 }
