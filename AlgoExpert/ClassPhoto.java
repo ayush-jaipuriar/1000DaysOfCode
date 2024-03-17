@@ -27,3 +27,4 @@ public class ClassPhoto {
 	}
 
 }
+//try try try
