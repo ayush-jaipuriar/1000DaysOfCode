@@ -1,0 +1,385 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "StreamTerminalOperationsCounting",
+            "request": "launch",
+            "mainClass": "JavaTheory.StreamTerminalOperationsCounting",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "StreamTerminalOperations",
+            "request": "launch",
+            "mainClass": "JavaTheory.StreamTerminalOperations",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "StreamNumericStreams",
+            "request": "launch",
+            "mainClass": "JavaTheory.StreamNumericStreams",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "StreamFactoryMethods",
+            "request": "launch",
+            "mainClass": "JavaTheory.StreamFactoryMethods",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "StreamFind",
+            "request": "launch",
+            "mainClass": "JavaTheory.StreamFind",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "StreamMatch",
+            "request": "launch",
+            "mainClass": "JavaTheory.StreamMatch",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "StreamsReduce",
+            "request": "launch",
+            "mainClass": "JavaTheory.StreamsReduce",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "StreamsSorted",
+            "request": "launch",
+            "mainClass": "JavaTheory.StreamsSorted",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "MapVsFlatMap",
+            "request": "launch",
+            "mainClass": "JavaTheory.MapVsFlatMap",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "Streams",
+            "request": "launch",
+            "mainClass": "JavaTheory.Streams",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "FunctionInterfaceExamples",
+            "request": "launch",
+            "mainClass": "JavaTheory.FunctionInterfaceExamples",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "PredicateExample",
+            "request": "launch",
+            "mainClass": "JavaTheory.PredicateExample",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "Predicate",
+            "request": "launch",
+            "mainClass": "JavaTheory.Predicate",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "Lambdas",
+            "request": "launch",
+            "mainClass": "JavaTheory.Lambdas",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "SwitchArrowLabels",
+            "request": "launch",
+            "mainClass": "JavaTheory.SwitchArrowLabels",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "RecordExample",
+            "request": "launch",
+            "mainClass": "JavaTheory.RecordExample",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "UnboundedWildcards",
+            "request": "launch",
+            "mainClass": "JavaTheory.UnboundedWildcards",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "OuterClass",
+            "request": "launch",
+            "mainClass": "JavaTheory.OuterClass",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "Generics",
+            "request": "launch",
+            "mainClass": "JavaTheory.Generics",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "InterfaceStaticMethods",
+            "request": "launch",
+            "mainClass": "JavaTheory.InterfaceStaticMethods",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "PermutationsSwapMethod",
+            "request": "launch",
+            "mainClass": "JavaTheory.PermutationsSwapMethod",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "MarkerInterface",
+            "request": "launch",
+            "mainClass": "JavaTheory.MarkerInterface",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "BubbleSort",
+            "request": "launch",
+            "mainClass": "BubbleSort",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "CaesarCipherEncryptor",
+            "request": "launch",
+            "mainClass": "CaesarCipherEncryptor",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "FindThreeLargestNumbers",
+            "request": "launch",
+            "mainClass": "FindThreeLargestNumbers",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "GenerateDocument",
+            "request": "launch",
+            "mainClass": "GenerateDocument",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "InsertionSort",
+            "request": "launch",
+            "mainClass": "InsertionSort",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "AbstractClassExample",
+            "request": "launch",
+            "mainClass": "JavaTheory.AbstractClassExample",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "AtomicVariables",
+            "request": "launch",
+            "mainClass": "JavaTheory.AtomicVariables",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "Composition",
+            "request": "launch",
+            "mainClass": "JavaTheory.Composition",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "ConstructorChaining",
+            "request": "launch",
+            "mainClass": "JavaTheory.ConstructorChaining",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "CreatingThreads",
+            "request": "launch",
+            "mainClass": "JavaTheory.CreatingThreads",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "ExecutorFramework",
+            "request": "launch",
+            "mainClass": "JavaTheory.ExecutorFramework",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "ExecutorFrameworkSharedResource",
+            "request": "launch",
+            "mainClass": "JavaTheory.ExecutorFrameworkSharedResource",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "ExecutorFrameworkTaskDependency",
+            "request": "launch",
+            "mainClass": "JavaTheory.ExecutorFrameworkTaskDependency",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "InterfaceConflict",
+            "request": "launch",
+            "mainClass": "JavaTheory.InterfaceConflict",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "JavaTheory.Main",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "MyThread",
+            "request": "launch",
+            "mainClass": "JavaTheory.MyThread",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "OverflowUnderflowExample",
+            "request": "launch",
+            "mainClass": "JavaTheory.OverflowUnderflowExample",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "PassByValueVsReference",
+            "request": "launch",
+            "mainClass": "JavaTheory.PassByValueVsReference",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "DuplicateWords",
+            "request": "launch",
+            "mainClass": "Misc.DuplicateWords",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "Main(1)",
+            "request": "launch",
+            "mainClass": "Misc.Main",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "Solution",
+            "request": "launch",
+            "mainClass": "Misc.Solution",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "Test",
+            "request": "launch",
+            "mainClass": "Misc.Test",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "pintuAndFruits",
+            "request": "launch",
+            "mainClass": "Misc.pintuAndFruits",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "sieve",
+            "request": "launch",
+            "mainClass": "Misc.sieve",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "test",
+            "request": "launch",
+            "mainClass": "Misc.test",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "Permutations",
+            "request": "launch",
+            "mainClass": "Permutations",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "RunLengthEncoding",
+            "request": "launch",
+            "mainClass": "RunLengthEncoding",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "CreateExpressions1",
+            "request": "launch",
+            "mainClass": "com.codeforces.CreateExpressions1",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "ThreeSum",
+            "request": "launch",
+            "mainClass": "com.drarc.levelup.ThreeSum",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "TwoSum",
+            "request": "launch",
+            "mainClass": "com.drarc.levelup.TwoSum",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "SetMatrixZero",
+            "request": "launch",
+            "mainClass": "com.striver.sdesheet.SetMatrixZero",
+            "projectName": "1000DaysOfCode"
+        }
+    ]
+}
