@@ -20,13 +20,18 @@ class BranchSums {
     }
 
     public static List<Integer> calculateSums(BinaryTree root, int runningSum, List<Integer> resultList) {
+        // Base Case : When the root is null
         if (root == null) {
             return resultList;
         }
+
+        // Base Case : When its a leaf node
         if (root.left == null && root.right == null) {
             runningSum += root.value;
             resultList.add(runningSum);
         }
+
+        // Recursive Case : When the root has either the left or right child node or both
         resultList = calculateSums(root.left, runningSum + root.value, resultList);
         resultList = calculateSums(root.right, runningSum + root.value, resultList);
         return resultList;
