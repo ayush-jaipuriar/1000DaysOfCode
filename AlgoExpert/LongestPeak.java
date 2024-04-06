@@ -7,8 +7,6 @@ class Program {
         int longestPeakLength = 0;
         int n = array.length;
         int currentPeakLength = 0;
-        int leftIndex = 0;
-        int rightIndex = 0;
         int i = 1;
         while (i < n - 1) {
             // Checking if current element array[i] is a peak or not
