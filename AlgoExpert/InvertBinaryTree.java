@@ -1,6 +1,9 @@
 import java.util.*;
 
 class Program {
+    // Iterative Approach
+    // Time Complexity : O(N) ; N is the number of nodes
+    // Space Complexity : O(N)
     public static void invertBinaryTree(BinaryTree tree) {
         // Using a Queue to perform BFS and traverse the tree
         Queue<BinaryTree> queue = new LinkedList<BinaryTree>();
