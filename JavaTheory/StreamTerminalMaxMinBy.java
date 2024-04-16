@@ -17,31 +17,28 @@ public class StreamTerminalMaxMinBy {
                 new Student("James", 21, 3.2),
                 new Student("Sarah", 24, 3.6));
 
-        // Finding min/max by GPA
-        Optional<Student> minGpaStudent = students.stream()
-                .collect(Collectors.minBy(Comparator.comparing(Student::gpa)));
+        // Finding min by GPA
+        Optional<Student> minGpaStudent = students.stream().collect(Collectors.minBy(Comparator.comparing(Student::gpa)));
         System.out.println(minGpaStudent.get());
 
-        Optional<Student> maxGpaStudent = students.stream()
-                .collect(Collectors.maxBy(Comparator.comparing(Student::gpa)));
+        // Finding max by GPA
+        Optional<Student> maxGpaStudent = students.stream().collect(Collectors.maxBy(Comparator.comparing(Student::gpa)));
         System.out.println(maxGpaStudent.get());
 
-        // Finding Min/Max by Age
-        Optional<Student> youngestStudent = students.stream()
-                .collect(Collectors.minBy(Comparator.comparing(Student::age)));
+        // Finding min by Age
+        Optional<Student> youngestStudent = students.stream().collect(Collectors.minBy(Comparator.comparing(Student::age)));
         System.out.println(youngestStudent.get());
 
-        Optional<Student> oldestStudent = students.stream()
-                .collect(Collectors.maxBy(Comparator.comparing(Student::age)));
+        // Finding max by Age
+        Optional<Student> oldestStudent = students.stream().collect(Collectors.maxBy(Comparator.comparing(Student::age)));
         System.out.println(oldestStudent.get());
 
-        // Finding Min/Max by String property (name)
-        Optional<Student> studentAlphabeticalMin = students.stream()
-                .collect(Collectors.minBy(Comparator.comparing(Student::name)));
+        // Finding Min by String property (name)
+        Optional<Student> studentAlphabeticalMin = students.stream().collect(Collectors.minBy(Comparator.comparing(Student::name)));
         System.out.println(studentAlphabeticalMin);
 
-        Optional<Student> studentAlphabeticalMax = students.stream()
-                .collect(Collectors.maxBy(Comparator.comparing(Student::name)));
+        // Finding max by String property (name)
+        Optional<Student> studentAlphabeticalMax = students.stream().collect(Collectors.maxBy(Comparator.comparing(Student::name)));
         System.out.println(studentAlphabeticalMax);
 
         // Custom Comparator (By GPA then Name)
@@ -49,14 +46,17 @@ public class StreamTerminalMaxMinBy {
         Optional<Student> minByGpaThenName = students.stream().collect(Collectors.minBy(gptThenNameComparator));
         System.out.println(minByGpaThenName.get());
 
+        // Custom Comparator (By GPA then name)
         Optional<Student> maxByGpaThenName = students.stream().collect(Collectors.maxBy(gptThenNameComparator));
         System.out.println(maxByGpaThenName.get());
 
         // Numeric Data Types
         List<Integer> numbers = Arrays.asList(5, 1, 8, 3, 9);
+        // Find Min Num in numbers list
         Optional<Integer> minNum = numbers.stream().collect(Collectors.minBy(Integer::compareTo));
         System.out.println(minNum.get());
 
+        // Find max number in numbers list
         Optional<Integer> maxNum = numbers.stream().collect(Collectors.maxBy(Integer::compareTo));
         System.out.println(maxNum.get());
 

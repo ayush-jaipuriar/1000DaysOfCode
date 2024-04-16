@@ -20,17 +20,20 @@ public class StreamComparator {
         // Sorting by multiple criteria(Comparator chaining)
         Comparator<Student> byScoreThenByName = Comparator.comparing(Student::score).thenComparing(Student::name);
         Collections.sort(students, byScoreThenByName);
+        Collections.sort(students, Comparator.comparing(Student::name).thenComparing(Student::score));
         System.out.println(students.toString());
 
         // Descending Order
         Comparator<Student> byScoreDesc = Comparator.comparing(Student::score).reversed();
         Collections.sort(students, byScoreDesc);
+        Collections.sort(students, Comparator.comparing(Student::name).reversed());
         System.out.println(students.toString());
 
         // Null Handling
         students.add(new Student(3,null, 0));
-        Comparator<Student> byNameNullsFirst = Comparator.nullsFirst(Comparator.comparing(Student::name, Comparator.nullsFirst(Comparator.naturalOrder())));
+        Comparator<Student> byNameNullsFirst = Comparator.nullsFirst(Comparator.comparing(Student::name, Comparator.nullsFirst(Comparator.naturalOrder())));    
         Collections.sort(students, byNameNullsFirst);
+        
         System.out.println(students.toString());
         
 
