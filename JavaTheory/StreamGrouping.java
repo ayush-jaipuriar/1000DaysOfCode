@@ -3,7 +3,9 @@ package JavaTheory;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 class Student {
@@ -67,14 +69,16 @@ class Item {
 public class StreamGrouping {
     public static void main(String[] args) {
         // Basic Grouping
+        // Group by word length, each group should have a word length as group key and all words having the same length as its grouped values
         List<String> words = Arrays.asList("hello", "world", "this", "is", "a", "stream");
         Map<Integer, List<String>> wordLengthMap = words.stream().collect(Collectors.groupingBy(String::length));
-        System.out.println(words);
+        wordLengthMap = words.stream().collect(Collectors.groupingBy(String::length));
+        System.out.println(wordLengthMap.toString());
 
         // Counting Occurrences
         List<Integer> numbers = Arrays.asList(2, 3, 5, 2, 3, 7, 3);
-        Map<Integer, Long> numCount = numbers.stream()
-                .collect(Collectors.groupingBy(num -> num, Collectors.counting()));
+        Map<Integer, Long> numCount = numbers.stream().collect(Collectors.groupingBy(num -> num, Collectors.counting()));
+        numbers.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         System.out.println(numCount);
 
         List<Employee> employees = Arrays.asList(
@@ -104,8 +108,59 @@ public class StreamGrouping {
                 new Item("Books", 15.0),
                 new Item("Electronics", 80.0),
                 new Item("Books", 20.0));
-        Map<String, Double> totalPriceByCategory = items.stream().collect(Collectors.groupingBy(Item::getCategory,Collectors.summingDouble(Item::getPrice)));
+        Map<String, Double> totalPriceByCategory = items.stream()
+                .collect(Collectors.groupingBy(Item::getCategory, Collectors.summingDouble(Item::getPrice)));
         System.out.println(totalPriceByCategory);
+
+        // Grouping with downstream collector to List
+        Map<String, List<Employee>> employeesByCity = employees.stream()
+                .collect(Collectors.groupingBy(Employee::getCity));
+        System.out.println(employeesByCity);
+
+        // Grouping with downstream collector to Set
+        Map<String, Set<Employee>> uniqueEmployeesByCity = employees.stream()
+                .collect(Collectors.groupingBy(Employee::getCity, Collectors.toSet()));
+        System.out.println(uniqueEmployeesByCity);
+
+        // Grouping and mapping to a different type
+        Map<String, List<String>> employeeNamesByCity = employees.stream()
+                .collect(Collectors.groupingBy(Employee::getCity,
+                        Collectors.mapping(Employee::getDepartment, Collectors.toList())));
+        System.out.println(employeeNamesByCity);
+
+        // Grouping and summing an integer property
+        Map<String, Integer> totalGpaByCategory = students.stream()
+                .collect(Collectors.groupingBy(Student::getName,
+                        Collectors.summingInt(student -> (int) student.getGPA())));
+        System.out.println(totalGpaByCategory);
+
+        // Grouping and averaging a double property
+        Map<String, Double> averageGpaByCategory = students.stream()
+                .collect(Collectors.groupingBy(Student::getName,
+                        Collectors.averagingDouble(Student::getGPA)));
+        System.out.println(averageGpaByCategory);
+
+        // Grouping by multiple fields using a composite key
+        Map<String, List<Employee>> employeesByDeptCity = employees.stream()
+                .collect(Collectors.groupingBy(employee -> employee.getDepartment() + "|" + employee.getCity()));
+        System.out.println(employeesByDeptCity);
+
+        // Grouping by classification function and custom downstream collector
+        Map<String, String> namesByGpaRange = students.stream()
+                .collect(Collectors.groupingBy(student -> student.getGPA() > 3.5 ? "Above average" : "Average",
+                        Collectors.mapping(Student::getName, Collectors.joining(", "))));
+        System.out.println(namesByGpaRange);
+
+        // Grouping by with reducing downstream collector
+        Map<String, Optional<Student>> topGpaStudentByCategory = students.stream()
+                .collect(Collectors.groupingBy(Student::getName,
+                        Collectors.reducing((s1, s2) -> s1.getGPA() > s2.getGPA() ? s1 : s2)));
+        System.out.println(topGpaStudentByCategory);
+
+        // Grouping by with partitioningBy downstream collector
+        Map<Boolean, List<Student>> partitionedStudents = students.stream()
+                .collect(Collectors.partitioningBy(student -> student.getGPA() >= 3.5));
+        System.out.println(partitionedStudents);
 
     }
 
