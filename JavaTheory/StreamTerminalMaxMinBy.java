@@ -54,6 +54,7 @@ public class StreamTerminalMaxMinBy {
         List<Integer> numbers = Arrays.asList(5, 1, 8, 3, 9);
         // Find Min Num in numbers list
         Optional<Integer> minNum = numbers.stream().collect(Collectors.minBy(Integer::compareTo));
+        numbers.stream().collect(Collectors.minBy(Integer::compareTo));
         System.out.println(minNum.get());
 
         // Find max number in numbers list
