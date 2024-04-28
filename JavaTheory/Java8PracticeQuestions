@@ -1,0 +1,121 @@
+class User {
+  Integer uid; 
+  
+  Strint name;
+  
+  Integer age;
+}
+List<User> list = new ArrayList<>();
+list.add(new User(1, "Ajinkya", 25));
+list.add(new User(2, "Pankaj",  23));
+list.add(new User(3, "Venkata", 44));
+list.add(new User(4, "Pravin",  25));
+list.add(new User(5, "Shilpa",  44));
+
+// Comparing
+Collections.sort(list, Comparator.comparing(list::getName)).thenComparing(list::getId))
+
+How can you sort the list of User objects by their name using a lambda expression?
+
+list.sort(Comparator.comparing(User::name))
+
+Write a lambda expression to filter the list to include only users whose age is greater than 30.
+
+list.stream().filter(user -> user.age>30).collect(Collectors.toList());
+
+Use a lambda expression to print the name of each User in the list.
+
+list.stream().forEach(System.out::
+
+Write a lambda expression to find the first User in the list whose age is equal to 25.
+
+list.stream().filter(user -> age == 25).findFirst().orElse(null)
+
+Use a lambda expression to check if any User in the list has a name starting with the letter "P".
+
+list.stream().filter(user -> user.name().startsWith("P")).findAny().orElse(null)
+
+Write a lambda expression to create a new list of User objects where each user's age is incremented by 1.
+
+list.stream().map(user -> new User(user.getId(), user.getName(), user.getAge()+1)).collect(Collectors.asList());
+
+Use a lambda expression to find the maximum age among all users in the list.
+list.stream().collect(Collectors.maxBy(User::age)).orElse(null);
+
+
+Write a lambda expression to count the number of users in the list whose name contains the letter "a".
+list.stream().filter(user -> user.name().contains("a")).count();
+
+Use a lambda expression to create a map where the keys are the uids and the values are the corresponding User objects.
+list.stream().collect(Collectors.toMap(User.getId(), Function.identity()));
+
+Write a lambda expression to calculate the average age of all users in the list.
+list.stream().mapToInt(User.getAge()).average() 
+
+
+Use a lambda expression to find the User with the longest name in the list.
+list.stream().collect(Collectors.maxBy(Comparator.comparing(User::getName))
+
+
+Write a lambda expression to check if all users in the list have a uid greater than 0.
+list.stream().allMatch(user -> user.uid() > 0)
+
+Use a lambda expression to create a new list of strings containing the names of users whose age is less than 30.
+list.stream().filter(user -> user.age() < 30).collect(Collectors.asList())
+
+
+Write a lambda expression to find the User with the smallest uid in the list.
+list.stream().collect(Collectors.minBy(Comparator.comparing(User::uid)).findFirst();
+list.stream().min(Comparator.comparing(User::uid))
+
+Use a lambda expression to partition the list into two lists: one with users whose age is even and another with users whose age is odd.
+list.stream().collect(Collectors.partitioningBy(user -> user.age%2==0))
+
+Write a lambda expression to calculate the sum of uids of all users in the list.
+list.stream().mapToInt(User::uid).sum();
+
+Use a lambda expression to sort the list by age in descending order.
+Collections.sort(list, Comparator.comparing(User::age).reversed())
+
+Write a lambda expression to find the User with the shortest name in the list.
+list.stream().min(Comparator.comparing(user -> user.getName().length()));
+
+Use a lambda expression to create a new list of User objects where each user's name is converted to uppercase.
+list.stream().map(user
+
+Write a lambda expression to check if there exists a User in the list whose uid is equal to a specific value.
+list.stream().anyMatch(user -> user.uid() == specificUid)
+
+
+??????
+
+
+Given a list of strings, write a code snippet to create a map where the keys are the first characters of the strings and the values are the lists of strings starting with each character.
+list.stream().collect(Collectors.groupingBy(string -> string.charAt(0))
+
+You have a list of Student objects, each with a name and a grade. Write a code snippet to calculate the average grade for each unique name.
+list.stream().collect(Collectors.groupingBy(s -> s.getName(), Collectors.averagingInt(Student::getGrade)))
+
+Given a list of Employee objects, each with a name, department, and salary, write a code snippet to find the employee with the highest salary in each department.
+list.stream().collect(Collectors.groupingBy(User::getDepartment, Collectors.collectingAndThen(Collectors.maxBy(User::getSalary)))
+
+
+You have a list of Transaction objects, each with an amount and a category. Write a code snippet to calculate the total amount spent for each category.
+list.stream().collect(Collectors.groupingBy(Transaction::category, Collectors.summingInt(Transaction::amount)))
+
+Given a list of Book objects, each with a title, author, and genre, write a code snippet to count the number of books in each genre.
+list.stream().collect(Collectors.groupingBy(Book::getGenre, Collectors.counting()))
+
+You have a list of Person objects, each with a name and an age. Write a code snippet to create a map where the keys are the age ranges (e.g., "0-10", "11-20", "21-30", etc.) and
+
+
+ the values are the lists of persons falling into each age range.
+ 
+ 
+Given a list of Product objects, each with a name, category, and price, write a code snippet to find the most expensive product in each category.
+list.stream().collect(Collectors.groupingBy(Product::category, Collectors.comparingAndThen(Collectors.maxBy(Comparator.comparingInt(Product::getPrice)), Optional::get))
+products.stream().collect(Collectors.groupingBy(Product::getCategory,Collectors.collectingAndThen(Collectors.maxBy(Comparator.comparingInt(Product::getPrice)),Optional::get)));
+
+You have a list of Student objects, each with a name, subject, and score. Write a code snippet to find the student with the highest score in each subject.
+Given a list of Employee objects, each with a name, department, and joiningDate, write a code snippet to create a map where the keys are the joining years and the values are the lists of employees who joined in each year.
+You have a list of Order objects, each with an orderId, customerId, and amount. Write a code snippet to calculate the total amount spent by each customer.
