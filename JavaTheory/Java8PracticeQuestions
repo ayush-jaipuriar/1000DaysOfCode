@@ -5,6 +5,7 @@ class User {
   
   Integer age;
 }
+// Sample List
 List<User> list = new ArrayList<>();
 list.add(new User(1, "Ajinkya", 25));
 list.add(new User(2, "Pankaj",  23));
