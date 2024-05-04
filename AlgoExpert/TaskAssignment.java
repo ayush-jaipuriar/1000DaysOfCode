@@ -5,8 +5,10 @@ class Program {
             int k, ArrayList<Integer> tasks) {
         ArrayList<ArrayList<Integer>> pairedTasks = new ArrayList<>();
         // Creating a HashMap of values
-        // Since we will sort the array and the question needs us to return pair of indices
-        // Hence for each task we will store their indices in the hashmap as task time : value(s)
+        // Since we will sort the array and the question needs us to return pair of
+        // indices
+        // Hence for each task we will store their indices in the hashmap as task time :
+        // value(s)
         HashMap<Integer, ArrayList<Integer>> taskDurationsToIndices = getTaskDurationsToIndices(tasks);
         ArrayList<Integer> sortedTasks = new ArrayList<>(tasks);
         Collections.sort(sortedTasks);
