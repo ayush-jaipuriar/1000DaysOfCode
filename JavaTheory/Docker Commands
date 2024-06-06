@@ -1,0 +1,3 @@
+Most Used Docker Commands :
+
+docker run hello-world : runs the sample docker hello-world app to check if docker is installed successfully on the system
