@@ -19,17 +19,20 @@ class Program {
 
     // Corner case where kth node from end is the first node or the head node of the linked list
     if (second == null && count==k) {
+      // If the kth node is the head, we set the head to its next node and then skip two nodes (head and next)
       first.value = first.next.value;
       first.next = first.next.next;
       return;
     }
 
-    while (second.next != null) {
+    // Move both pointers until the second pointer reaches the end of the list
+    while (second.next!= null) {
       count++;
       first = first.next;
       second = second.next;
     }
-    // Reached k-1th element from the end, now removing it from the linked list chain
+    // At this point, the second pointer is at the last node, and the first pointer is at the (k-1)th node from the end
+    // We need to remove the kth node from the end, so we skip over it by setting the next of the first pointer to the node after the kth node
     first.next = first.next.next;       
   }
 
