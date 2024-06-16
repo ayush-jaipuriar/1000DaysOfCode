@@ -1,36 +1,30 @@
-import java.util.Arrays;
+public static int[] bubbleSort(int[] array) {
+    int n = array.length;
+    boolean performedSort = false; // Flag to check if any swap was made during the inner loop iteration
 
-public class BubbleSort {
-	
-	// Time Complexity : O(n^2) , O(n) if array is already sorted thanks to optimization
-	// Space Complexity : O(1)
+    // Outer loop runs n times where n is the length of the array
+    for (int i = 0; i < n; i++) {
+        performedSort = false; // Reset the flag for each outer loop iteration
 
-	public static int[] bubbleSort(int[] array) {
-		int n = array.length;
-		boolean performedSort = false;
-		for (int i = 0; i < n; i++) {
-			performedSort = false;
-			for (int j = 0; j < n - i - 1; j++) {
-				if (array[j] > array[j + 1]) {
-					int temp = array[j];
-					array[j] = array[j + 1];
-					array[j + 1] = temp;
-					performedSort = true;
-				}
-			}
-			// No need to perform swaps if no two elements got swapped i.e array is already sorted
-			if (!performedSort) {
-				break;
-			}
-		}
+        // Inner loop compares adjacent elements and swaps them if they are in the wrong order
+        for (int j = 0; j < n - i - 1; j++) {
+            if (array[j] > array[j + 1]) {
+                // Swap elements if the current element is greater than the next one
+                int temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
 
-		return array;
-	}
+                // Set the flag to true if a swap was made
+                performedSort = true;
+            }
+        }
 
-	public static void main(String[] args) {
-		int[] testArray = { 8, 5, 2, 9, 5, 6, 3 };
-		int[] outputArray = bubbleSort(testArray);
-		System.out.println(Arrays.toString(outputArray));
-	}
+        // If no swaps were made during the inner loop iteration, it means the array is already sorted
+        // So, there's no need to continue sorting
+        if (!performedSort) {
+            break;
+        }
+    }
 
+    return array; // Return the sorted array
 }

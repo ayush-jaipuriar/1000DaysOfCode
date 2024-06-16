@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "StreamComparator",
+            "request": "launch",
+            "mainClass": "JavaTheory.StreamComparator",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "CodingTest",
+            "request": "launch",
+            "mainClass": "CodingTest",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "StreamGrouping",
+            "request": "launch",
+            "mainClass": "JavaTheory.StreamGrouping",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
             "name": "StreamTerminalOperationsCounting",
             "request": "launch",
             "mainClass": "JavaTheory.StreamTerminalOperationsCounting",

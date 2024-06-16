@@ -45,7 +45,7 @@ class BranchSums {
             runningSum += root.value;
             resultList.add(runningSum);
         } else {
-            // Recursive Case : If the node has children, recursively call calculateSums for both left and right subtrees,
+            // RecursiveAlgo Case : If the node has children, recursively call calculateSums for both left and right subtrees,
             // adding the current node's value to the running sum before passing it along.
             resultList = calculateSums(root.left, runningSum + root.value, resultList);
             resultList = calculateSums(root.right, runningSum + root.value, resultList);
