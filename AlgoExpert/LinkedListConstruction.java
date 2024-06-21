@@ -1,6 +1,5 @@
 import java.util.*;
 
-// Feel free to add new properties and methods to the class.
 class Program {
     static class DoublyLinkedList {
         public Node head;
@@ -69,10 +68,10 @@ class Program {
             }
             Node currentNode = head;
             int currentPosition = 1;
-            while (currentNode != null && currentPosition++ != position) {
+            while (currentNode!= null && currentPosition++!= position) {
                 currentNode = currentNode.next;
             }
-            if (currentNode != null) {
+            if (currentNode!= null) {
                 insertBefore(currentNode, nodeToInsert);
             } else {
                 setTail(nodeToInsert);
@@ -83,7 +82,7 @@ class Program {
         // Space Complexity : O(1); n= number of elements in linked list
         public void removeNodesWithValue(int value) {
             Node currentNode = head;
-            while (currentNode != null) {
+            while (currentNode!= null) {
                 Node nodeToRemove = currentNode;
                 currentNode = currentNode.next;
                 if (nodeToRemove.value == value) {
@@ -107,10 +106,10 @@ class Program {
         // Time Complexity : O(1)
         // Space Complexity : O(1); n= number of elements in linked list
         public void removeNodeBindings(Node node) {
-            if (node.prev != null) {
+            if (node.prev!= null) {
                 node.prev.next = node.next;
             }
-            if (node.next != null) {
+            if (node.next!= null) {
                 node.next.prev = node.prev;
             }
             node.prev = null;
@@ -121,11 +120,10 @@ class Program {
         // Space Complexity : O(1); n= number of elements in linked list
         public boolean containsNodeWithValue(int value) {
             Node currentNode = head;
-            while (currentNode != null && currentNode.value != value) {
+            while (currentNode!= null && currentNode.value!= value) {
                 currentNode = currentNode.next;
             }
-            return currentNode != null;
-
+            return currentNode!= null;
         }
     }
 
