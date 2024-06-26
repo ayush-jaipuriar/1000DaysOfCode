@@ -1,34 +1,46 @@
 public class NthFibonacci {
 
-	public static int getNthFib(int n) {
-		// Iterative Solution, best approach
-		// Time Complexity : O(n)
-		// Space Complexity : O(1)
-		if (n == 1) {
-			return 0;
-		} else if (n == 2) {
-			return 1;
-		}
-		int fib1 = 0;
-		int fib2 = 1;
-		int nthFib = 0;
-		for (int i = 3; i <= n; i++) {
-			nthFib = fib1 + fib2;
-			fib1 = fib2;
-			fib2 = nthFib;
-		}
-		return nthFib;
-	}
+    // Method to find the nth Fibonacci number iteratively
+    public static int getNthFib(int n) {
+        // Base cases
+        if (n == 1) {
+            return 0;
+        } else if (n == 2) {
+            return 1;
+        }
+        
+        // Initialize first two Fibonacci numbers
+        int fib1 = 0;
+        int fib2 = 1;
+        
+        // Variable to store the nth Fibonacci number
+        int nthFib = 0;
+        
+        // Loop through the rest of the sequence
+        for (int i = 3; i <= n; i++) {
+            // Calculate the next Fibonacci number
+            nthFib = fib1 + fib2;
+            
+            // Update values for the next iteration
+            fib1 = fib2;
+            fib2 = nthFib;
+        }
+        
+        // Return the nth Fibonacci number
+        return nthFib;
+    }
 
-	public static int getNthFibRecursive(int n) {
-		// Time Complexity : O(2^n)
-		// Space Complexity : O(n) since we are creating n call stacks
-		if (n == 1) {
-			return 0;
-		} else if (n == 2) {
-			return 1;
-		}
-		return getNthFibRecursive(n - 1) + getNthFibRecursive(n - 2);
-	}
+    // Recursive method to find the nth Fibonacci number
+    public static int getNthFibRecursive(int n) {
+        // Base cases
+        if (n == 1) {
+            return 0;
+        } else if (n == 2) {
+            return 1;
+        }
+        
+        // Recursive calculation
+        return getNthFibRecursive(n - 1) + getNthFibRecursive(n - 2);
+    }
 
 }
