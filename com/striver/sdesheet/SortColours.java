@@ -1,27 +1,28 @@
 package com.striver.sdesheet;
 
-import java.sql.Time;
+// Corrected import statement to remove unused import
+import java.util.Arrays; // Added for sorting demonstration
 
 public class SortColours {
     /*
-     * *
-     * Time Complexity:
-     * 
-     * O(n), where n is the length of the input array.
-     * - We traverse the array once to count the occurrences of 0, 1, and 2.
-     * - Then we traverse it again to overwrite the elements based on counts.
+     * Problem Statement:
+     * Given an array with three types of integers (0, 1, and 2),
+     * write a method to move all items such that 0 precedes 1 and 1 precedes 2.
+     * You have to do this in-place without making a copy of the array.
      *
-     * Space Complexity: O(1), as we are not using any extra space.
+     * Approach:
+     * - Count the occurrence of each number.
+     * - Reconstruct the array according to the counts.
      */
 
-    public void sortColors(int[] nums) {
+    public static void sortColors(int[] nums) {
         int zeroCount = 0;
         int oneCount = 0;
         int twoCount = 0;
 
         // Count occurrences of 0, 1, and 2
-        for (int i = 0; i < nums.length; i++) {
-            switch (nums[i]) {
+        for (int num : nums) {
+            switch (num) {
                 case 0:
                     zeroCount++;
                     break;
@@ -35,21 +36,23 @@ public class SortColours {
         }
 
         // Overwrite the array with 0s, 1s, and 2s based on counts
-        int i = 0;
-        while (zeroCount > 0) {
-            nums[i] = 0;
-            i++;
-            zeroCount--;
+        int index = 0;
+        while (zeroCount-- > 0) {
+            nums[index++] = 0;
         }
-        while (oneCount > 0) {
-            nums[i] = 1;
-            i++;
-            oneCount--;
+        while (oneCount-- > 0) {
+            nums[index++] = 1;
         }
-        while (twoCount > 0) {
-            nums[i] = 2;
-            i++;
-            twoCount--;
+        while (twoCount-- > 0) {
+            nums[index++] = 2;
         }
+    }
+
+    // Example usage
+    public static void main(String[] args) {
+        int[] exampleArray = {2, 0, 2, 1, 0, 0, 1, 2};
+        System.out.println("Before Sorting: " + Arrays.toString(exampleArray));
+        sortColors(exampleArray);
+        System.out.println("After Sorting: " + Arrays.toString(exampleArray));
     }
 }
