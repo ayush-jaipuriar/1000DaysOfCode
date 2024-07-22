@@ -18,3 +18,15 @@ let ayush = new Person('Ayush', 'Jaipuriar');
 
 // Call the greet method on the ayush object
 ayush.greet();
+
+
+// Symbols in Javascript
+let symbol1 = Symbol('symbol1');
+let symbol2 = Symbol('symbol1');
+console.log(symbol1 === symbol2); // false
+
+let mySymbol = Symbol();
+let obj = {
+    [mySymbol] : 'Ayush'
+}
+console.log(obj[mySymbol]);
