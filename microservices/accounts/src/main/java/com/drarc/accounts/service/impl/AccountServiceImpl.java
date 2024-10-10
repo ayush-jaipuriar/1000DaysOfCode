@@ -4,6 +4,8 @@ import com.drarc.accounts.dto.CustomerDto;
 import com.drarc.accounts.entity.Accounts;
 import com.drarc.accounts.entity.Customer;
 import com.drarc.accounts.exception.CustomerAlreadyExistsException;
+import com.drarc.accounts.exception.ResourceNotFoundException;
+import com.drarc.accounts.mapper.AccountsMapper;
 import com.drarc.accounts.mapper.CustomerMapper;
 import com.drarc.accounts.repository.AccountsRepository;
 import com.drarc.accounts.repository.CustomerRepository;
@@ -54,5 +56,13 @@ public class AccountServiceImpl implements IAccountsService {
 
     private Long generateAccountNumber() {
         return 1000000000L + new Random().nextInt(999999999); // Example logic for generating account number
+    }
+    @Override
+    public CustomerDto fetchAccount(String mobileNumber) {
+        Customer customer = customerRepository.findByMobileNumber(mobileNumber).orElseThrow(() -> new ResourceNotFoundException("Customer", "mobileNumber", mobileNumber));
+        Accounts accounts = accountsRepository.findByCustomerId(customer.getCustomerId()).orElseThrow(()-> new ResourceNotFoundException("Account", "customerId", customer.getCustomerId().toString()));
+        CustomerDto customerDto = CustomerMapper.mapToCustomerDto(customer);
+        customerDto.setAccountsDto(AccountsMapper.mapAccountToDto(accounts));
+        return customerDto;
     }
 }

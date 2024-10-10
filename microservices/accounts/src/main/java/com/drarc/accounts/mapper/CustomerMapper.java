@@ -5,7 +5,7 @@ import com.drarc.accounts.entity.Customer;
 
 public class CustomerMapper {
     public static CustomerDto mapToCustomerDto(Customer customer) {
-        return new CustomerDto(customer.getName(), customer.getEmail(), customer.getMobileNumber());
+        return new CustomerDto(customer.getName(), customer.getEmail(), customer.getMobileNumber(), null);
     }
 
     public static Customer mapToCustomerEntity(CustomerDto customerDto) {

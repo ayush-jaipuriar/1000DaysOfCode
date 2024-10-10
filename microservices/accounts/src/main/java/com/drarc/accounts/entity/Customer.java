@@ -17,7 +17,7 @@ public class Customer extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long customerId;
     private String name;
-    private String email;
     private String mobileNumber;
+    private String email;
 
 }
