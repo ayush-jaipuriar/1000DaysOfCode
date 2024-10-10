@@ -21,6 +21,6 @@ public class AccountServiceImpl implements IAccountsService {
 
     @Override
     public void createAccount(CustomerDto customerDto) {
-        // Logic to create account will go here
+        // 
     }
 }

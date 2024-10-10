@@ -1,8 +1,9 @@
 package com.drarc.accounts.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
-@Data
+@Data @AllArgsConstructor
 public class AccountsDto {
     private Long accountNumber;
     private String accountType;
