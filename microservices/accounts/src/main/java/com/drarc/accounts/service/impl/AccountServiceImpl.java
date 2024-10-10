@@ -3,6 +3,7 @@ package com.drarc.accounts.service.impl;
 import com.drarc.accounts.dto.CustomerDto;
 import com.drarc.accounts.entity.Accounts;
 import com.drarc.accounts.entity.Customer;
+import com.drarc.accounts.exception.CustomerAlreadyExistsException;
 import com.drarc.accounts.mapper.CustomerMapper;
 import com.drarc.accounts.repository.AccountsRepository;
 import com.drarc.accounts.repository.CustomerRepository;
@@ -10,6 +11,7 @@ import com.drarc.accounts.service.IAccountsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
 import java.util.Random;
 
 @Service
@@ -26,6 +28,10 @@ public class AccountServiceImpl implements IAccountsService {
 
     @Override
     public void createAccount(CustomerDto customerDto) {
+        Optional<Customer> existingCustomer = customerRepository.findByMobileNumber(customerDto.getMobileNumber());
+        if (existingCustomer.isPresent()) {
+            throw new CustomerAlreadyExistsException("Customer already registered with the given mobile number");
+        }
         // Covert Customer DTO to Entity
         Customer customer = CustomerMapper.mapToCustomerEntity(customerDto);
 
@@ -38,6 +44,7 @@ public class AccountServiceImpl implements IAccountsService {
         accounts.setAccountType("Savings");
         accounts.setBranchAddress("Hyderabad");
         accounts.setCustomerId(customer.getCustomerId());
+        accountsRepository.save(accounts);
     }
 
     private Long generateAccountNumber() {
