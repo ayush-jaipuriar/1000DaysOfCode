@@ -11,6 +11,7 @@ import com.drarc.accounts.service.IAccountsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 import java.util.Random;
 
@@ -34,6 +35,8 @@ public class AccountServiceImpl implements IAccountsService {
         }
         // Covert Customer DTO to Entity
         Customer customer = CustomerMapper.mapToCustomerEntity(customerDto);
+        customer.setCreatedAt(LocalDateTime.now());
+        customer.setCreatedBy("anonymous");
 
         // Save Customer to repository
         customerRepository.save(customer);
@@ -44,6 +47,8 @@ public class AccountServiceImpl implements IAccountsService {
         accounts.setAccountType("Savings");
         accounts.setBranchAddress("Hyderabad");
         accounts.setCustomerId(customer.getCustomerId());
+        accounts.setCreatedAt(LocalDateTime.now());
+        accounts.setCreatedBy("anonymous");
         accountsRepository.save(accounts);
     }
 
