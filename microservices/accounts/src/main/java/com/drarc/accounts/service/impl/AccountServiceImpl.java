@@ -37,9 +37,6 @@ public class AccountServiceImpl implements IAccountsService {
         }
         // Covert Customer DTO to Entity
         Customer customer = CustomerMapper.mapToCustomerEntity(customerDto);
-        customer.setCreatedAt(LocalDateTime.now());
-        customer.setCreatedBy("anonymous");
-
         // Save Customer to repository
         customerRepository.save(customer);
 
@@ -49,18 +46,17 @@ public class AccountServiceImpl implements IAccountsService {
         accounts.setAccountType("Savings");
         accounts.setBranchAddress("Hyderabad");
         accounts.setCustomerId(customer.getCustomerId());
-        accounts.setCreatedAt(LocalDateTime.now());
-        accounts.setCreatedBy("anonymous");
         accountsRepository.save(accounts);
     }
 
     private Long generateAccountNumber() {
         return 1000000000L + new Random().nextInt(999999999); // Example logic for generating account number
     }
+
     @Override
     public CustomerDto fetchAccount(String mobileNumber) {
         Customer customer = customerRepository.findByMobileNumber(mobileNumber).orElseThrow(() -> new ResourceNotFoundException("Customer", "mobileNumber", mobileNumber));
-        Accounts accounts = accountsRepository.findByCustomerId(customer.getCustomerId()).orElseThrow(()-> new ResourceNotFoundException("Account", "customerId", customer.getCustomerId().toString()));
+        Accounts accounts = accountsRepository.findByCustomerId(customer.getCustomerId()).orElseThrow(() -> new ResourceNotFoundException("Account", "customerId", customer.getCustomerId().toString()));
         CustomerDto customerDto = CustomerMapper.mapToCustomerDto(customer);
         customerDto.setAccountsDto(AccountsMapper.mapAccountToDto(accounts));
         return customerDto;
