@@ -29,7 +29,10 @@ public class AccountsController {
 
     @PostMapping("/create")
     @Operation(summary = "Create Account REST API", description = "REST API to create a new Customer and Account in Bank")
-    @ApiResponse(responseCode = "201", description = "HTTPStatus.CREATED")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "201", description = "CREATED"),
+            @ApiResponse(responseCode = "500", description = "Internal Server Error")
+    })
     public ResponseEntity<ResponseDto> createAccount(@Valid @RequestBody CustomerDto customerDto) {
         accountsService.createAccount(customerDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(new ResponseDto(AccountsConstants.STATUS_201, AccountsConstants.STATUS_MESSAGE_201));
@@ -38,6 +41,7 @@ public class AccountsController {
     @GetMapping("/fetch")
     @Operation(summary = "Fetch Account REST API", description = "REST API to fetch Customer and Account Details using Mobile Number")
     @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "OK"),
             @ApiResponse(responseCode = "500", description = "Internal Server Error")
     })
     public ResponseEntity<CustomerDto> fetchAccountDetails(@RequestParam @Pattern(regexp = "\\d{10}", message = "Mobile number must be 10 digits") String mobileNumber) {
