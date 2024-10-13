@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(path="/api", produces = MediaType.APPLICATION_JSON_VALUE)
 @Validated
-@Tag(name = "CRUD REST APIs for Accounts", description = "CRUD REST APIs to CREATE and FETCH Bank Account Details")
+@Tag(name = "CR REST APIs for Accounts", description = "CRUD REST APIs to CREATE and FETCH Bank Account Details")
 public class AccountsController {
 
     @Autowired
