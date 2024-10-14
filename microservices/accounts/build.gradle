@@ -1,43 +1,72 @@
 plugins {
+	// Apply the Java plugin for building Java applications
 	id 'java'
+
+	// Apply the Spring Boot plugin with the specified version to enable Spring Boot capabilities
 	id 'org.springframework.boot' version '3.3.4'
+
+	// Apply the Spring Dependency Management plugin to automatically manage dependencies versions
 	id 'io.spring.dependency-management' version '1.1.6'
 }
 
-group = 'com.drarc'
-version = '0.0.1-SNAPSHOT'
+group = 'com.drarc' // Define the group ID of the project (usually the package structure)
+version = '0.0.1-SNAPSHOT' // Version of the project; 'SNAPSHOT' indicates it's still in development
 
 java {
 	toolchain {
+		// Set the Java language version to use for the project (in this case, Java 17)
 		languageVersion = JavaLanguageVersion.of(17)
 	}
 }
 
 configurations {
 	compileOnly {
-		extendsFrom annotationProcessor
+		// The compileOnly configuration is for dependencies needed at compile time but not at runtime.
+		extendsFrom annotationProcessor // Extend annotation processor so it includes the necessary libraries
 	}
 }
 
 repositories {
+	// Use Maven Central repository to fetch dependencies
 	mavenCentral()
 }
 
 dependencies {
+	// Spring Boot Actuator: Adds features like health checks and metrics for the application
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+	// Spring Boot Data JPA: Provides JPA (Java Persistence API) support for database interactions
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// Spring Boot Validation: Provides validation support for request payloads and data
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+	// Spring Boot Web: Adds support for building web applications, including REST APIs
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// Springdoc OpenAPI: Generates OpenAPI documentation for REST APIs with a web-based UI (Swagger UI)
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0'
 
+	// Lombok: A library that reduces boilerplate code (like getters, setters, etc.). This is compile-only.
 	compileOnly 'org.projectlombok:lombok'
+
+	// Spring Boot DevTools: Provides development-time features like hot reloading and automatic restart
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	// H2 Database: An in-memory database for testing purposes. Ideal for development.
 	runtimeOnly 'com.h2database:h2'
+
+	// Lombok annotation processor: Processes Lombok annotations at compile time
 	annotationProcessor 'org.projectlombok:lombok'
+
+	// Spring Boot Test Starter: Includes Spring Boot test dependencies (JUnit, MockMVC, etc.) for testing
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// JUnit Platform Launcher: A runtime dependency for running JUnit tests
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 tasks.named('test') {
+	// Configure the test task to use JUnit platform for running tests
 	useJUnitPlatform()
 }
