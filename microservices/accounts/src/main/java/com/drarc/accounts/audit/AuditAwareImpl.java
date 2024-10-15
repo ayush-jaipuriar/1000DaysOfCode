@@ -10,7 +10,6 @@ public class AuditAwareImpl implements AuditorAware<String> {
 
     @Override
     public Optional<String> getCurrentAuditor() {
-        // Return the Auditor(hardcoded for now)
-        return Optional.of("ACCOUNTS_MS");
+        return Optional.of("Ayush Jaipuriar");
     }
 }
