@@ -10,5 +10,7 @@ COPY build/libs/accounts-0.0.1-SNAPSHOT.jar app.jar
 # Expose the application port
 EXPOSE 8080
 
+
+
 # Define the entry point to run the JAR file
 ENTRYPOINT ["java", "-jar", "accounts-0.0.1-SNAPSHOT"]
