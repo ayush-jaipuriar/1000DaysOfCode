@@ -31,6 +31,10 @@ repositories {
 	mavenCentral()
 }
 
+bootBuildImage {
+	imageName = 'accounts_microservice:buildpack'
+}
+
 dependencies {
 	// Spring Boot Actuator: Adds features like health checks and metrics for the application
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
