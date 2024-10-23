@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-alpine
 WORKDIR /app
 
 # Copy the executable JAR file from the host to the container
-COPY /build/libs/accounts-0.0.1-SNAPSHOT.jar app.jar
+COPY loans/target/loans-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the application port
 EXPOSE 8080
