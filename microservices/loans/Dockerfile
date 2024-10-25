@@ -8,7 +8,7 @@ WORKDIR /app
 COPY /target/loans-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the application port
-EXPOSE 8080
+EXPOSE 8090
 
 # Define the entry point to run the JAR file
 ENTRYPOINT ["java", "-jar", "app.jar"]
