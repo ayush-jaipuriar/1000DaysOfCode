@@ -24,8 +24,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 						email = "jaipuriar.ayush@gmail.com"
 				),
 				license = @License(
-						name = "Apache 2.0",
-						url = "https://www.eazybytes.com"
+						name = "Apache 2.0"
 				)
 		),
 		externalDocs = @ExternalDocumentation(
