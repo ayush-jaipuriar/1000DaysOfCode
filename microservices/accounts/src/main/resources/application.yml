@@ -18,3 +18,7 @@ spring:
         ddl-auto:update #Auto Creates the tables if not already created
     show-sql: true
 
+build:
+  version: 1.0
+
+
