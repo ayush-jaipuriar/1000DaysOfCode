@@ -1,6 +1,7 @@
 package com.drarc.accounts.controller;
 
 import com.drarc.accounts.constants.AccountsConstants;
+import com.drarc.accounts.dto.AccountsContactInfoDto;
 import com.drarc.accounts.dto.CustomerDto;
 import com.drarc.accounts.dto.ResponseDto;
 import com.drarc.accounts.service.IAccountsService;
@@ -12,6 +13,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -22,6 +24,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(path="/api", produces = MediaType.APPLICATION_JSON_VALUE)
 @Validated
+@EnableConfigurationProperties(AccountsContactInfoDto.class)
 @Tag(name = "CR REST APIs for Accounts", description = "CRUD REST APIs to CREATE and FETCH Bank Account Details")
 public class AccountsController {
 
@@ -33,6 +36,9 @@ public class AccountsController {
 
     @Autowired
     private IAccountsService accountsService;
+
+    @Autowired
+    private AccountsContactInfoDto accountsContactInfoDto;
 
     @PostMapping("/create")
     @Operation(summary = "Create Account REST API", description = "REST API to create a new Customer and Account in Bank")
@@ -67,6 +73,12 @@ public class AccountsController {
     public ResponseEntity<String> getMavenVersion() {
         String javaVersion = environment.getProperty("JAVA_HOME");
         return ResponseEntity.status(HttpStatus.OK).body(javaVersion);
+    }
+
+    @GetMapping("/contact-info")
+    @Operation(summary = "Get contact info", description = "Returns contact information for support related to Accounts Microservice")
+    public ResponseEntity<AccountsContactInfoDto> getContactInfo() {
+        return ResponseEntity.status(HttpStatus.OK).body(accountsContactInfoDto);
     }
 
 

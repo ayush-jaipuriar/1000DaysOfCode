@@ -21,4 +21,13 @@ spring:
 build:
   version: 1.0
 
+accounts:
+  message: "This is Accounts Microservice"
+  contactDetails:
+    name: "Ayush Jaipuriar"
+    email: "jaipuriar.ayush@gmail.com"
+  onCallSupport:
+    - "910909090"
+    - "728782738"
+
 
