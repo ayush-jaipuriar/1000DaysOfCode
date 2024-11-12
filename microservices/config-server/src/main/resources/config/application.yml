@@ -1,0 +1,39 @@
+#Server configuration
+server:
+  port: 8080 #default port, but its a good practice to explicitly state it
+
+#H2 Database configuration
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled:true #enables the h2 console in the browser
+  #JPA (Java Persistance API) configuration
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+        ddl-auto:update #Auto Creates the tables if not already created
+    show-sql: true
+  config:
+    import :
+      - "application-dev.yml"
+      - "application-qa.yml"
+  profiles:
+    active: dev
+
+build:
+  version: 1.1
+
+accounts:
+  message: "This is Accounts Microservice"
+  contactDetails:
+    name: "Ayush Jaipuriar"
+    email: "jaipuriar.ayush@gmail.com"
+  onCallSupport:
+    - "910909090"
+    - "728782738"
+
+
