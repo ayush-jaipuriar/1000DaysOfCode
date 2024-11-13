@@ -7,8 +7,8 @@ accounts:
     name: "Ayush Jaipuriar"
     email: "jaipuriar.ayush@gmail.com"
   onCallSupport:
-    - "910909090"
-    - "728782738"
+    - "{cipher}be0f041a8f891f1ccd313edceb016eaad1da31cae85189cf7f9024e5e8050891"
+    - "{cipher}2101d6f4fd09b8d3c99c5855d9bce28934488cd288c8a77621da04a095c145a6}"
 
 spring:
   config:
