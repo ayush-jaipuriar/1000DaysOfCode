@@ -42,6 +42,11 @@ repositories {
 	mavenCentral()
 }
 
+ext {
+	set('springCloudVersion', "2023.0.3")
+}
+
+
 bootBuildImage {
 	imageName = 'accounts_microservice:buildpack'
 }
@@ -79,6 +84,16 @@ dependencies {
 
 	// JUnit Platform Launcher: A runtime dependency for running JUnit tests
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	implementation 'org.springframework.cloud:spring-cloud-starter-config'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+dependencyManagement {
+	imports {
+		mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
+	}
 }
 
 tasks.named('test') {

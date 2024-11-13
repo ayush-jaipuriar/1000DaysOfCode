@@ -4,6 +4,8 @@ server:
 
 #H2 Database configuration
 spring:
+  application:
+    name: "accounts"
   datasource:
     url: jdbc:h2:mem:testdb
     driver-class-name: org.h2.Driver
@@ -17,12 +19,12 @@ spring:
     hibernate:
         ddl-auto:update #Auto Creates the tables if not already created
     show-sql: true
-  config:
-    import :
-      - "application-dev.yml"
-      - "application-qa.yml"
   profiles:
     active: dev
+  config:
+    import: "optional:configserver:http://localhost:8071"
+
+
 
 build:
   version: 1.1

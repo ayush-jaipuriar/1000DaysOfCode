@@ -1,0 +1,50 @@
+# Specifies the Docker Compose version used for defining the services and configuration.
+version: '3.8'
+
+# Defines the services (containers) that will be created.
+services:
+
+  # Service definition for the 'accounts' microservice
+  accounts:
+    # Specifies the Docker image to use for this service
+    image: "accounts_microservice:latest"
+    # Assigns a custom name to the container for easier identification
+    container_name: "accounts-microservice"
+    # Maps port 8080 on the host to port 8080 on the container
+    ports:
+      - "8080:8080"
+    # Configures resource limits for the container
+    deploy:
+      resources:
+        limits:
+          # Sets the maximum memory usage for the container to 700 MB
+          memory: 700M
+    # Adds the 'accounts' service to the custom-defined network
+    networks:
+      - microservices_network
+
+  # Service definition for the 'loans' microservice
+  loans:
+    # Specifies the Docker image to use for this service
+    image: "loans_microservice:latest"
+    # Assigns a custom name to the container for easier identification
+    container_name: "loans-microservice"
+    # Maps port 8090 on the host to port 8090 on the container
+    ports:
+      - "8090:8090"
+    # Configures resource limits for the container
+    deploy:
+      resources:
+        limits:
+          # Sets the maximum memory usage for the container to 700 MB
+          memory: 700M
+    # Adds the 'loans' service to the custom-defined network
+    networks:
+      - microservices_network
+
+# Network definition to allow communication between services
+networks:
+  # Custom network for connecting microservices together
+  microservices_network:
+    # Specifies the bridge network driver (isolates network traffic between services)
+    driver: bridge
