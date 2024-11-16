@@ -23,7 +23,6 @@ services:
     networks:
       - microservices_network
 
-  # Service definition for the 'loans' microservice
   loans:
     # Specifies the Docker image to use for this service
     image: "loans_microservice:latest"
