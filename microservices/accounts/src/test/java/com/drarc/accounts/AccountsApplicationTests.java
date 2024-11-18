@@ -8,7 +8,6 @@ class AccountsApplicationTests {
 
 	@Test
 	void contextLoads() {
-		System.out.println("Inside contextLoads");
 	}
 
 }

@@ -2,7 +2,7 @@ build:
   version: 1.0
 
 accounts:
-  message: "This is Accounts Microservice running on Dev profile"
+  message: "This is Accounts Microservice running on Developer profile"
   contactDetails:
     name: "Ayush Jaipuriar"
     email: "jaipuriar.ayush@gmail.com"

@@ -38,3 +38,9 @@ accounts:
     - "910909090"
 
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
