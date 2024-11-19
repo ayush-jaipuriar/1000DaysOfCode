@@ -13,8 +13,7 @@ spring:
     password:
   h2:
     console:
-      enabled:true #enables the h2 console in the browser
-  #JPA (Java Persistance API) configuration
+      enabled:true
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
         ddl-auto:update #Auto Creates the tables if not already created
