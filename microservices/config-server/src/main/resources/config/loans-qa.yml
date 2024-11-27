@@ -1,0 +1,11 @@
+build:
+  version: "2.0"
+
+loans:
+  message: "Welcome to loans related QA APIs "
+  contactDetails:
+    name: "Ayush Jaipuriar - Developer"
+    email: "jaipuriar.ayush@gmail.com"
+  onCallSupport:
+    - (785) 545-6565
+    - (853) 546-3467
