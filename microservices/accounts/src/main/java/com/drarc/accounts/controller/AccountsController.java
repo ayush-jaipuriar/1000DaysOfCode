@@ -47,6 +47,7 @@ public class AccountsController {
             @ApiResponse(responseCode = "500", description = "Internal Server Error")
     })
     public ResponseEntity<ResponseDto> createAccount(@Valid @RequestBody CustomerDto customerDto) {
+        System.out.println("Hello World");
         accountsService.createAccount(customerDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(new ResponseDto(AccountsConstants.STATUS_201, AccountsConstants.STATUS_MESSAGE_201));
     }
