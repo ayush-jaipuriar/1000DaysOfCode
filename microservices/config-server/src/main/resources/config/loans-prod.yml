@@ -2,7 +2,7 @@ build:
   version: "1.0"
 
 loans:
-  message: "Welcome to loans related prod APIs "
+  message: "Welcome to loans related production APIs "
   contactDetails:
     name: "Ayush Jaipuriar - Developer"
     email: "jaipuriar.ayush@gmail.com"

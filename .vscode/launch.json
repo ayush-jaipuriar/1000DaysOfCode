@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "NSECorporateDisclosureFetcher",
+            "request": "launch",
+            "mainClass": "TUF.NSECorporateDisclosureFetcher",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
             "name": "StreamComparator",
             "request": "launch",
             "mainClass": "JavaTheory.StreamComparator",
