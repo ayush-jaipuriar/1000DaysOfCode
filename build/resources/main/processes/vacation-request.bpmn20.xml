@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:flowable="http://flowable.org/bpmn"
+             targetNamespace="http://example.com/vacation-request">
+
+    <process id="vacationRequest" name="Vacation Request Process" isExecutable="true">
+        
+        <startEvent id="startEvent" />
+        
+        <sequenceFlow sourceRef="startEvent" targetRef="submitRequestTask" />
+
+        <userTask id="submitRequestTask" name="Submit Vacation Request"
+                  flowable:assignee="${initiator}">
+            <extensionElements>
+                <flowable:formProperty id="startDate" type="date" required="true" />
+                <flowable:formProperty id="endDate" type="date" required="true" />
+                <flowable:formProperty id="reason" type="string" required="true" />
+            </extensionElements>
+        </userTask>
+
+        <sequenceFlow sourceRef="submitRequestTask" targetRef="managerApprovalTask" />
+
+        <userTask id="managerApprovalTask" name="Manager Approval"
+                  flowable:candidateGroups="managers">
+            <extensionElements>
+                <flowable:formProperty id="approved" type="boolean" required="true" />
+                <flowable:formProperty id="comments" type="string" />
+            </extensionElements>
+        </userTask>
+
+        <sequenceFlow sourceRef="managerApprovalTask" targetRef="approvalDecision" />
+
+        <exclusiveGateway id="approvalDecision" />
+
+        <sequenceFlow sourceRef="approvalDecision" targetRef="hrRecordTask">
+            <conditionExpression xsi:type="tFormalExpression">
+                ${approved == true}
+            </conditionExpression>
+        </sequenceFlow>
+
+        <sequenceFlow sourceRef="approvalDecision" targetRef="notifyRejection" />
+
+        <serviceTask id="hrRecordTask" name="HR Record Keeping"
+                     flowable:class="com.example.workflow.HRServiceTask" />
+
+        <sequenceFlow sourceRef="hrRecordTask" targetRef="notifyApproval" />
+
+        <serviceTask id="notifyApproval" name="Notify Approval"
+                     flowable:delegateExpression="${notificationDelegate}" />
+
+        <serviceTask id="notifyRejection" name="Notify Rejection"
+                     flowable:delegateExpression="${notificationDelegate}" />
+
+        <endEvent id="endEvent" />
+        
+        <sequenceFlow sourceRef="notifyApproval" targetRef="endEvent" />
+        <sequenceFlow sourceRef="notifyRejection" targetRef="endEvent" />
+
+    </process>
+</definitions>

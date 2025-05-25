@@ -1,0 +1,58 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "AccountsApplication",
+            "request": "launch",
+            "mainClass": "com.drarc.accounts.AccountsApplication",
+            "projectName": "accounts",
+            "env": {
+                "SPRING_PROFILES_ACTIVE": "dev", // Or "qa", etc.
+                "SERVER_PORT": "8080",          // Or your desired port
+                // "SPRING_CONFIG_IMPORT": "optional:configserver:http://your-other-host:8071", // If needed
+                // "JAVA_HOME": "/path/to/your/jdk17" // If needed to override
+            },
+            "args": [
+                // You can also pass properties as program arguments
+                // "--server.port=8081",
+                // "--spring.profiles.active=qa"
+            ],
+            "vmArgs": [
+                // Or as VM options (system properties)
+                // "-Dserver.port=8081",
+                // "-Dspring.profiles.active=qa"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "Launch LoansApplication",
+            "request": "launch",
+            "mainClass": "com.eazybytes.loans.LoansApplication",
+            "projectName": "loans", // Ensure this matches your Gradle project name if applicable
+            "env": {
+                // These will override properties in application.yml or those from the config server
+                // For standard operation, you might not need to set these if application.yml is configured
+                "SERVER_PORT": "8090",
+                "SPRING_APPLICATION_NAME": "loans",
+                "SPRING_CONFIG_IMPORT": "configserver:http://localhost:8071",
+                "SPRING_PROFILES_ACTIVE": "prod",
+                "LOGGING_LEVEL_COM_EAZYBYTES_LOANS": "DEBUG" // Example for verbose logging
+            },
+            "vmArgs": [
+                // Alternative to env for system properties:
+                // "-Dserver.port=8090",
+                // "-Dspring.profiles.active=prod"
+            ],
+            "args": [
+                // Program arguments, can also be used for Spring Boot properties:
+                // "--server.port=8090",
+                // "--spring.profiles.active=prod"
+            ]
+        }
+        
+    ]
+}

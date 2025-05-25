@@ -1,7 +1,985 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry excluding="AlgoExpert/" kind="src" path=""/>
-	<classpathentry kind="src" path="AlgoExpert"/>
+	<classpathentry kind="src" output="build/resources/test" path="src/test/resources">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="resource" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="build/classes/java/test" path="src/test/java">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="build/resources/main" path="src/main/resources">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="resource" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="build/classes/java/main" path="src/main/java">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="build/classes/java/test" path="build/generated/sources/annotationProcessor/java/test">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="build/classes/java/main" path="build/generated/sources/annotationProcessor/java/main">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-process-validation/6.8.0/db0e30a428f53937541a7f0e635545ecc3eb28e3/flowable-process-validation-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-process-validation/6.8.0/81ca8e53a4a37c21efc7acd00323b0ca8bd6c243/flowable-process-validation-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-dmn-spring-configurator/6.8.0/d3bac5d31d1bb02d285e610e820ebfaf5cf5421a/flowable-dmn-spring-configurator-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-dmn-spring-configurator/6.8.0/b5171610b29f534dc6a6194bf8c2c36338629f02/flowable-dmn-spring-configurator-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/4.0.1/ca2330866cbc624c7e5ce982e121db1125d23e15/jakarta.xml.bind-api-4.0.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/4.0.1/7723d0945b45888b9d8af6e0358a5f5d5cdec2fd/jakarta.xml.bind-api-4.0.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter/3.2.0/4d0cc70617a9febbbc6ad81562e930d93f7b2665/spring-boot-starter-3.2.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter/3.2.0/16c9936add73ba60d7b3a8ffeec2b7fdcbbef1d2/spring-boot-starter-3.2.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/6.1.1/4eeb5f2edb9f04d00357edcc56b59d3874b3b453/spring-web-6.1.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/6.1.1/9ca23e110965b376c724ab6f49b7aa0a24c6bfc6/spring-web-6.1.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.15.3/60d600567c1862840397bf9ff5a92398edc5797b/jackson-core-2.15.3.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.15.3/e275b6eae6b6c71083b0305b8aeaaf72e36a2ca/jackson-core-2.15.3-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.zaxxer/HikariCP/5.0.1/a74c7f0a37046846e88d54f7cb6ea6d565c65f9c/HikariCP-5.0.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.zaxxer/HikariCP/5.0.1/9a803965be1f6709795aeaf17d7a71c18791dcda/HikariCP-5.0.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-job-service-api/6.8.0/cc239331f03db778bcc6d4a9f1f059007a624dda/flowable-job-service-api-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-job-service-api/6.8.0/9a8c3d41fc01120ad154a9fe444964f16b9030f1/flowable-job-service-api-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-dmn-engine/6.8.0/1692b6a603154bb0b788e62e97646dc92e25a29d/flowable-dmn-engine-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-dmn-engine/6.8.0/f41643c3a9f4b43fc34bcd9d910b58a36e595dd0/flowable-dmn-engine-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/jakarta.activation/jakarta.activation-api/2.1.2/640c0d5aff45dbff1e1a1bc09673ff3a02b1ba12/jakarta.activation-api-2.1.2.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/jakarta.activation/jakarta.activation-api/2.1.2/d0310cf32e4c43f65b942c18cb2cc2bccfe2de37/jakarta.activation-api-2.1.2-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-event-registry-configurator/6.8.0/e204974b463c2d7e630414f2c9ccd76e45505335/flowable-event-registry-configurator-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-event-registry-configurator/6.8.0/158e9a183fd8224cf6069683586b9f5c7bf77f90/flowable-event-registry-configurator-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/javax.activation/activation/1.1/e6cb541461c2834bdea3eb920f1884d1eb508b50/activation-1.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/javax.activation/activation/1.1/3697e9f67a2ed7ac5f589cff30f21173299440/activation-1.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-spring-configurator/6.8.0/1c920900b9562f139670a0b77a3d3d659caa1238/flowable-spring-configurator-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-spring-configurator/6.8.0/466e06929261b90e1f07d376020267037a764875/flowable-spring-configurator-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-app-engine-spring/6.8.0/2eeb0c722b7ffa4310021d9f5f555b79fece6091/flowable-app-engine-spring-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-app-engine-spring/6.8.0/58700cb1d3864b5e103555a631ac884c667135b/flowable-app-engine-spring-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-collections4/4.4/62ebe7544cb7164d87e0637a2a6a2bdc981395e8/commons-collections4-4.4.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-collections4/4.4/6260e416ff273ee938b31b0a8e512a367b1ee500/commons-collections4-4.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-event-registry-api/6.8.0/934d94629eabab78892544b3baa64a0ece4da405/flowable-event-registry-api-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-event-registry-api/6.8.0/6a740d7c23e68bf9ca8f44d803d78d51a5831317/flowable-event-registry-api-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/jakarta.inject/jakarta.inject-api/2.0.1/4c28afe1991a941d7702fe1362c365f0a8641d1e/jakarta.inject-api-2.0.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/jakarta.inject/jakarta.inject-api/2.0.1/569d6c5f18d6ff83c82152d1870cf0faf830c594/jakarta.inject-api-2.0.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-dmn-api/6.8.0/db1d3799d5b32d7fdfa870ba8a472e222cedbdf1/flowable-dmn-api-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-dmn-api/6.8.0/94f7c8619ba2f2e28b19db01ca001c8d399b5f8c/flowable-dmn-api-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-idm-engine/6.8.0/70561af36b557b4890a7aa32d275a50cdcf1d3cf/flowable-idm-engine-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-idm-engine/6.8.0/a6d560f43ef5cbe9123fa0e6fc074c3a04de211f/flowable-idm-engine-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-spring/6.8.0/e47034283a73564410167329ac39203c7a6a0516/flowable-spring-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-spring/6.8.0/dda2679e3d98e9167eb9a89cf19afad69358a756/flowable-spring-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-job-spring-service/6.8.0/c570eb3e4439c6b31f04b28cf674eabc53c6b64d/flowable-job-spring-service-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-job-spring-service/6.8.0/7af72a8deb938068853e27a7900b19865d4f8291/flowable-job-spring-service-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-entitylink-service-api/6.8.0/151ed9198f4c730c665b1d13d5f24d72deb0224e/flowable-entitylink-service-api-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-entitylink-service-api/6.8.0/1b4bfedab2f8b5e28915df89af146f27f2293246/flowable-entitylink-service-api-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-core/4.0.4/2d5aadd02af86f1e9d8c6f7e8501673f915d4e25/jaxb-core-4.0.4.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-core/4.0.4/ece1e800db7d3c4625221ed1c2ef32d53aff9d5/jaxb-core-4.0.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.eclipse.angus/angus-activation/2.0.1/eaafaf4eb71b400e4136fc3a286f50e34a68ecb7/angus-activation-2.0.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.eclipse.angus/angus-activation/2.0.1/661e619dc11106d2ea38a9cebb28928ca2d8fa32/angus-activation-2.0.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-web/3.2.0/e609f839e7c2ff9c90bc75d7c05dbcbb19315319/spring-boot-starter-web-3.2.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-web/3.2.0/d97057e9e5867f614b88a8cac57e4c7fac42bec9/spring-boot-starter-web-3.2.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-http-common/6.8.0/c0a01729ec6bfa8a4ec25f61068a25aeb2637770/flowable-http-common-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-http-common/6.8.0/67a5ada96496882611194ae7ee6fe56d0d57bf4b/flowable-http-common-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-eventsubscription-service-api/6.8.0/b4a0b8183b7213d62a3af782219241d50d8e7709/flowable-eventsubscription-service-api-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-eventsubscription-service-api/6.8.0/28aa2a81ca701f0f5ddc838412c90abdaf881d7/flowable-eventsubscription-service-api-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-spring-common/6.8.0/5cc9a1cac7ce0f97ac67de7c686c1df70b01fd3a/flowable-spring-common-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-spring-common/6.8.0/1248d2cdb0abd9107f9b731655df27d29c861fba/flowable-spring-common-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-spring-security/6.8.0/262e141ef57b3d182b66b49a328ca0387b753bba/flowable-spring-security-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-spring-security/6.8.0/c8d43a7ad50ae6059a25474bd33e8eedd7de8d8e/flowable-spring-security-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.h2database/h2/2.2.224/7bdade27d8cd197d9b5ce9dc251f41d2edc5f7ad/h2-2.2.224.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.h2database/h2/2.2.224/3b207e6b1933e49bf68f375b52a1ce0ed8b912b7/h2-2.2.224-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-variable-service/6.8.0/b5d872d66de6d93058a267cee44cb64e4eda519c/flowable-variable-service-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-variable-service/6.8.0/1be7cb26929663ccb0ee8df1fe0886a198433d8f/flowable-variable-service-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/io.micrometer/micrometer-commons/1.12.0/2436654d439bd4ff6aad6419519357be8ba4f0d/micrometer-commons-1.12.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/io.micrometer/micrometer-commons/1.12.0/3b7271c7ba1b7964ed63d751b62676f93103b5ec/micrometer-commons-1.12.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-dmn-engine-configurator/6.8.0/6d3304154ef8958ae1398eac95938b24f722c66b/flowable-dmn-engine-configurator-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-dmn-engine-configurator/6.8.0/e5d482b67e27904e764419967dc1a309296935e8/flowable-dmn-engine-configurator-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-spring-boot-starter/6.8.0/2be612a47651e2669e42ecb7f33a8401c7e04a37/flowable-spring-boot-starter-6.8.0.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-aop/3.2.0/1c4e5498a0ae4c179d0c192e9b674ac656f3e0b9/spring-boot-starter-aop-3.2.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-aop/3.2.0/12cdc21e70ac8bb5268bdbd4cb6d22b1857d5484/spring-boot-starter-aop-3.2.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.11.0/a2503f302b11ebde7ebc3df41daebe0e4eea3689/commons-io-2.11.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.11.0/2ef0187124bbfc7aed3038d4ffdd2241e8992937/commons-io-2.11.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-to-slf4j/2.21.1/d77b2ba81711ed596cd797cc2b5b5bd7409d841c/log4j-to-slf4j-2.21.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-to-slf4j/2.21.1/31272b58321454b5d5a565f1e782ed4448ab3312/log4j-to-slf4j-2.21.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.opencsv/opencsv/5.8/8ec9e6c5e72d83a4122498344a6cf1d22dc08322/opencsv-5.8.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.opencsv/opencsv/5.8/3afef45fd23656fd2d6c8e13cfb6c45d5d094e99/opencsv-5.8-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-cmmn-engine-configurator/6.8.0/5f3cb45be82db2d83b2d486511b2ab741f19a316/flowable-cmmn-engine-configurator-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-cmmn-engine-configurator/6.8.0/b086bc7d89bca2a991ac335977363c69cf5a0b97/flowable-cmmn-engine-configurator-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/10.1.16/176162fb3998856a90436826034ffe5d25beaeb9/tomcat-embed-core-10.1.16.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/10.1.16/b2f870096146485fd0698589b3e941938f67d588/tomcat-embed-core-10.1.16-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/2.2/3af797a25458550a16bf89acc8e4ab2b7f2bfce0/snakeyaml-2.2.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/2.2/575a7915b847393207642575c139177ac2b2ac23/snakeyaml-2.2-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-app-engine/6.8.0/e0c6267ad7da796632de32e839928c107413a3fd/flowable-app-engine-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-app-engine/6.8.0/e149183748741cbeaacd03fc3f1ed7682317aa8e/flowable-app-engine-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-content-api/6.8.0/d22522e4faecb3d9477394dca6103294226361d3/flowable-content-api-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-content-api/6.8.0/7d7374de514ffba30132429e8b449522e2fe0db0/flowable-content-api-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/3.2.0/29b231378146bd6606e75389297f3a7d55476b87/spring-boot-autoconfigure-3.2.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/3.2.0/69f472d39b2b48b2a4c3159b00fe74fb07974683/spring-boot-autoconfigure-3.2.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-content-spring/6.8.0/dd566c3070383926d8b03e9c725d20b0cb253ef2/flowable-content-spring-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-content-spring/6.8.0/bd5f23026222995ca45f80145ebba0c2f8e92f34/flowable-content-spring-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/6.1.1/610d7dd3f62d22d42b993a201e3110649b68e17/spring-context-6.1.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/6.1.1/649851d4c84070c32c10529e7925d48d5f672b38/spring-context-6.1.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/6.1.1/69ebbf7bad707d34e81d00213c756bc6fcc31dd7/spring-jcl-6.1.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/6.1.1/642500afb47d63ba51348d2775a9067af6ec5f66/spring-jcl-6.1.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-task-service/6.8.0/2e1f57511aa1892d16ea46e9056bedc5e4cd6e7c/flowable-task-service-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-task-service/6.8.0/9d68f4b25a47b315b7f6ed64c25c5c848c3b30ed/flowable-task-service-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-cmmn-spring-configurator/6.8.0/2ae77f3b4bad8a694ab9331442fe58bb08a5778b/flowable-cmmn-spring-configurator-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-cmmn-spring-configurator/6.8.0/f486e0728d4a0bcffa404327b60f538958689fac/flowable-cmmn-spring-configurator-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-json/3.2.0/e831483c03433b987cc9c72f8ea67757f9865191/spring-boot-starter-json-3.2.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-json/3.2.0/5f00f9f2bd0b0c33ec8403810dfa80d5534234d4/spring-boot-starter-json-3.2.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-spring-boot-starter-app/6.8.0/4b9753ea3fe2e6c29e799cf7dd84eeb6293dc1bb/flowable-spring-boot-starter-app-6.8.0.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis/3.5.10/19b180954f0845962088d49760aa2d9f048395f1/mybatis-3.5.10.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis/3.5.10/d94dfc86c174b8c99d7e8d5b656da92e7bf68706/mybatis-3.5.10-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-jpa/3.2.0/6a8ad077a37f8a0cef6949dcfd91a9b2115cade/spring-boot-starter-data-jpa-3.2.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-jpa/3.2.0/e968be99d8f203c8e9da1e121b00f64fef8f174e/spring-boot-starter-data-jpa-3.2.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-job-service/6.8.0/eaad22b658d3353a18082d7190630b5723e164fd/flowable-job-service-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-job-service/6.8.0/8fa9025db96d226d00641d44110deffbf4675989/flowable-job-service-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-identitylink-service/6.8.0/4a7b5f35a2b30a333113331bbdd3fd451216b3ff/flowable-identitylink-service-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-identitylink-service/6.8.0/393f2347920c735411bbcfc845f3fd1467918fdb/flowable-identitylink-service-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-form-spring/6.8.0/f9b4bc16a510ada84682505ccb01754e59ef6583/flowable-form-spring-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-form-spring/6.8.0/4ac7ba739ab369948b5c6fc9b53525b3cb7b6ca2/flowable-form-spring-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-tomcat/3.2.0/fc758099e394fe5646d9e36883fab38da4b26e22/spring-boot-starter-tomcat-3.2.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-tomcat/3.2.0/546c20ae1a84e26307ca06285923870d2fbb8b61/spring-boot-starter-tomcat-3.2.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-identitylink-service-api/6.8.0/a5a2fecd178661fa69a8ed4d933221737ba10774/flowable-identitylink-service-api-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-identitylink-service-api/6.8.0/45a3a39caac88c92758a1ac663f4a34b8e0ffe7e/flowable-identitylink-service-api-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-case-validation/6.8.0/7c02db71e206bbf8142ce0e7af02c2c9f6b8df75/flowable-case-validation-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-case-validation/6.8.0/fc294e7ac3fc8f6c41637444e9b5cbe66c356261/flowable-case-validation-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-task-service-api/6.8.0/7795ea8cf4a557291bdd10c2ce47c6e4a25bc0c7/flowable-task-service-api-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-task-service-api/6.8.0/4159f2ef3f43dead94dfb707503f0ff1b2dc04eb/flowable-task-service-api-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/3.2.0/1c98c48b9fde0624337e19f3577fce20d19b78ea/spring-data-commons-3.2.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/3.2.0/4c26d01c9324633e96966f3bdd7ffe1de4ac59e0/spring-data-commons-3.2.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjweaver/1.9.20.1/33b0e41476658229933eec7134678cf336e66dd4/aspectjweaver-1.9.20.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjweaver/1.9.20.1/92c96d3f7be6a80a3f1fc540b2ebee4c4af97bbd/aspectjweaver-1.9.20.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.sun.mail/javax.mail/1.5.6/ab5daef2f881c42c8e280cbe918ec4d7fdfd7efe/javax.mail-1.5.6.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.sun.mail/javax.mail/1.5.6/7a9a2f66d64bed834a9090c4e91e78892e2e67a1/javax.mail-1.5.6-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-orm/6.1.1/e9672bb788f74ed12f9ad9e2bf12eb9e4d7c8695/spring-orm-6.1.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-orm/6.1.1/9f4d9e8320d5e9fe37df7004c247b6982b7e1842/spring-orm-6.1.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aspects/6.1.1/bfcb6682e205b4ef6ae7986ac7ea35eae29f31f4/spring-aspects-6.1.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aspects/6.1.1/4cc0eae4805b3c432c28d021e83590e42f86b52a/spring-aspects-6.1.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-cmmn-model/6.8.0/cc08e32136d3150c859d0770b0d9ebc318e5de87/flowable-cmmn-model-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-cmmn-model/6.8.0/897a670eb0695a2e01a4552b8600eed9e666e1d2/flowable-cmmn-model-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/6.1.1/100cf99c3e41b12eab810d780c0e6e3905c51c12/spring-tx-6.1.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/6.1.1/831de15965e3022e5fc7792fa358b4ac74e09a0d/spring-tx-6.1.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-jdbc/3.2.0/1ab4ef09c814142be2fafc6d40c9bc242921ca12/spring-boot-starter-jdbc-3.2.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-jdbc/3.2.0/d9e6d805fed4aff1d6029374b6fdfc206c69b744/spring-boot-starter-jdbc-3.2.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-spring-boot-starter-cmmn/6.8.0/79d970b387e96231510e18c8a02dcb297651435a/flowable-spring-boot-starter-cmmn-6.8.0.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-engine-configurator/6.8.0/8c6d212fe1a47080a75077a3da912ac300321853/flowable-engine-configurator-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-engine-configurator/6.8.0/a5877f8449edcd8e2b1d36d6728d2ab127493677/flowable-engine-configurator-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-batch-service-api/6.8.0/bcf659ce847714dc8a02bb94c0d2e5a3dc9c887b/flowable-batch-service-api-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-batch-service-api/6.8.0/1eaa44b645c6adff53b1756b2cd5a24fab25de81/flowable-batch-service-api-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-spring-boot-starter-dmn/6.8.0/c3a7e88b386282509046f3476bc6c0f4a22d5417/flowable-spring-boot-starter-dmn-6.8.0.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/6.1.1/807700a64cb055ed85af189d1fa0702bc0d2efba/spring-expression-6.1.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/6.1.1/9b8a778ee7a384f017910bb10a7585a5d769a43d/spring-expression-6.1.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-app-engine-api/6.8.0/98e6d235183ccc5db225759fcfc3b28d00edaac2/flowable-app-engine-api-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-app-engine-api/6.8.0/a2d758390e2fab3a305ea52c00e2aeaf1214f833/flowable-app-engine-api-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-event-registry-model/6.8.0/a9714887f3d5f222a3c62dc1d8064d877431f58b/flowable-event-registry-model-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-event-registry-model/6.8.0/38937ecc7ec6f9f6d2d5de607fe5fc90acc5239f/flowable-event-registry-model-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.15.3/a734bc2c47a9453c4efa772461a3aeb273c010d9/jackson-databind-2.15.3.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.15.3/61876bc4e552ff3b7657909fc3232e94e6a4ce8e/jackson-databind-2.15.3-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-parameter-names/2.15.3/8d251b90c5358677e7d8161e0c2488e6f84f49da/jackson-module-parameter-names-2.15.3.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-parameter-names/2.15.3/a69102db97639344028b198720103e3d1c72d5fe/jackson-module-parameter-names-2.15.3-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/io.micrometer/micrometer-observation/1.12.0/4f4981faa7968441d0092107df9b750e057374af/micrometer-observation-1.12.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/io.micrometer/micrometer-observation/1.12.0/f079a24e5081ab907c1fc27a01c22062f75927ae/micrometer-observation-1.12.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.4.11/2f9f280219a9922a74200eaf7138c4c17fb87c0f/logback-core-1.4.11.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.4.11/9899e21389d8b800a9c093c9e43afefe7824dd62/logback-core-1.4.11-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-email/1.5/e8e677c6362eba14ff3c476ba63ccb83132dbd52/commons-email-1.5.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-email/1.5/dbe951d1b89eb9472b4b2c8f618b8bc9783b6623/commons-email-1.5-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.21.1/74c65e87b9ce1694a01524e192d7be989ba70486/log4j-api-2.21.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.21.1/7c87eb50e74855cd86f92bf370300b60ceef4a0b/log4j-api-2.21.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/6.1.1/76c4408b67828aa9656f5955dc2c1c4c0e1b6da3/spring-webmvc-6.1.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/6.1.1/4996999900ea98fbd26b589221d03d396167ed08/spring-webmvc-6.1.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-dmn-spring/6.8.0/a4dcac24eb69ec7de7369b6953726306f1241327/flowable-dmn-spring-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-dmn-spring/6.8.0/1d04c4f280cbcf4070f94ab4caf892a4dc95f996/flowable-dmn-spring-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-cmmn-converter/6.8.0/45b31bd3e4c4efa82c68f799da5acc5fece131d7/flowable-cmmn-converter-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-cmmn-converter/6.8.0/e0e0ef31e93148fa6440a06b257584fcd3657d46/flowable-cmmn-converter-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/2.0.9/89eb336cf1183ce075253c7c3788aa196d56f71a/jcl-over-slf4j-2.0.9.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/2.0.9/ea4c932dbb30801b22290f10d30a63c966af18ec/jcl-over-slf4j-2.0.9-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.14.10/8117daf4a612122eb4f517f66adff778cb8b4737/byte-buddy-1.14.10.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.14.10/d2f281046da2f9092be51a5b8891841502e7ed27/byte-buddy-1.14.10-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.4.11/54450c0c783e896a1a6d88c043bd2f1daba1c382/logback-classic-1.4.11.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.4.11/633da78998a88874bb7d697f055e5f28b40b5d5c/logback-classic-1.4.11-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-eventsubscription-service/6.8.0/c3ca92f78d7e1a86771e6e3d8faca89108422673/flowable-eventsubscription-service-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-eventsubscription-service/6.8.0/d1f0b9a5dfc45f2da3e31918e5ff0cc42898dfc0/flowable-eventsubscription-service-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-cmmn-api/6.8.0/95988f7099a0e8ef8a8c1f3b1729e9076b647080/flowable-cmmn-api-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-cmmn-api/6.8.0/f925303771ca6a084ce53fa1724a54e419eeb742/flowable-cmmn-api-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.hibernate.common/hibernate-commons-annotations/6.0.6.Final/77a5f94b56d49508e0ee334751db5b78e5ccd50c/hibernate-commons-annotations-6.0.6.Final.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.hibernate.common/hibernate-commons-annotations/6.0.6.Final/113904346d97dbdf52883c90ef1ccd0bb8ffb74d/hibernate-commons-annotations-6.0.6.Final-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.15.3/4a20a0e104931bfa72f24ef358c2eb63f1ef2aaf/jackson-datatype-jsr310-2.15.3.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.15.3/73d1c83fdf632e5e415da01ed16c6dadc098993/jackson-datatype-jsr310-2.15.3-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-bpmn-converter/6.8.0/8ca213e75324bec6681d03e91b1b2907563a7441/flowable-bpmn-converter-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-bpmn-converter/6.8.0/a3faef0b3a9db42826cf63fbc7f7c987aca55cc3/flowable-bpmn-converter-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/io.smallrye/jandex/3.1.2/a6c1c89925c7df06242b03dddb353116ceb9584c/jandex-3.1.2.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/io.smallrye/jandex/3.1.2/35283029daace9fdef053223d8759d24562d51b3/jandex-3.1.2-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-event-registry/6.8.0/5afb6a58370c34fc453d00f61faec898aa82e49e/flowable-event-registry-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-event-registry/6.8.0/2ba407503a5a2a403e49cc2cbed139e1c9e3436b/flowable-event-registry-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-event-registry-spring/6.8.0/7a7ab7a178bf4268f1ebc21d0e8ead901138a894/flowable-event-registry-spring-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-event-registry-spring/6.8.0/a59fb232f1008563e9439ef2c1d31431ec988f6f/flowable-event-registry-spring-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.fasterxml/classmate/1.6.0/91affab6f84a2182fce5dd72a8d01bc14346dddd/classmate-1.6.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.fasterxml/classmate/1.6.0/799a7d0e6ad3de8580302886c1dc72f83baa3a10/classmate-1.6.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.slf4j/jul-to-slf4j/2.0.9/9ef7c70b248185845f013f49a33ff9ca65b7975/jul-to-slf4j-2.0.9.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.slf4j/jul-to-slf4j/2.0.9/2150c4d3cad9f73e902f7679ece60cad80dfb61/jul-to-slf4j-2.0.9-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-event-registry-spring-configurator/6.8.0/b84d0a8a19563cba759e4932ce08759fc077889a/flowable-event-registry-spring-configurator-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-event-registry-spring-configurator/6.8.0/b7ad1e2a8e1a7b195c8eb5c8c71fbf9c3eef5c4e/flowable-event-registry-spring-configurator-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/jakarta.annotation/jakarta.annotation-api/2.1.1/48b9bda22b091b1f48b13af03fe36db3be6e1ae3/jakarta.annotation-api-2.1.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/jakarta.annotation/jakarta.annotation-api/2.1.1/3beea3ed2e687d9bd8a78c00e18951fffccefe90/jakarta.annotation-api-2.1.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.10.13/86f338c18cea2a89005556642e81707ff920dd38/joda-time-2.10.13.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.10.13/847ab12d4972ce68261a86b42e620452e7af1e54/joda-time-2.10.13-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-form-engine/6.8.0/22a9d5d8ac7fb284cff9328e5ae0e3903bf58200/flowable-form-engine-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-form-engine/6.8.0/6af00a50712889b4431b9e2183ea874132e312cb/flowable-form-engine-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.15.3/80158cb020c7bd4e4ba94d8d752a65729dc943b2/jackson-datatype-jdk8-2.15.3.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.15.3/607834b8d83623952b94c1f07abbbc1fd0cb7e16/jackson-datatype-jdk8-2.15.3-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-form-spring-configurator/6.8.0/5a64a9a2330656299260dd8489b04ca7f71fa0d1/flowable-form-spring-configurator-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-form-spring-configurator/6.8.0/faeb216d98abf69f18ca1e16f418143b1efa184e/flowable-form-spring-configurator-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-text/1.10.0/3363381aef8cef2dbc1023b3e3a9433b08b64e01/commons-text-1.10.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-text/1.10.0/99ad76c831fcf0edead47f3aa9c0731653a0845d/commons-text-1.10.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-event-registry-json-converter/6.8.0/e1cbb0ad5124ed1ce3d51e01abad4bbf6297016d/flowable-event-registry-json-converter-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-event-registry-json-converter/6.8.0/e03cdff502734ed47a338a4de0e9c1bc6ce315be/flowable-event-registry-json-converter-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/txw2/4.0.4/cfd2bcf08782673ac370694fdf2cf76dbaa607ef/txw2-4.0.4.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/txw2/4.0.4/1171c6ba6a0f040618222c01abe951a5f70f7b2/txw2-4.0.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-engine-common/6.8.0/c695076c262b21ef23b02e7b0111c515421b0fff/flowable-engine-common-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-engine-common/6.8.0/682c1458fc4c0de218dbd2dd3c4d57705d0fd29e/flowable-engine-common-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-content-engine-configurator/6.8.0/f5ec92e6dc01f6dcc709c62fbd38fb78b6725a62/flowable-content-engine-configurator-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-content-engine-configurator/6.8.0/194846bbea1a5e96bcd4ac02b6a4dbe65bcbb630/flowable-content-engine-configurator-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-dmn-xml-converter/6.8.0/6c9b0974221eac37beb7fd810fa38c601abfc872/flowable-dmn-xml-converter-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-dmn-xml-converter/6.8.0/9fa40f1f74c9efef752885c8f49a67f1fadc86fa/flowable-dmn-xml-converter-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-idm-spring-configurator/6.8.0/6ee040c4b1b316b19fca831e1a03bda6a95ac865/flowable-idm-spring-configurator-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-idm-spring-configurator/6.8.0/cd4b04f48cf39a139925c61b8410cf50a38dd4a9/flowable-idm-spring-configurator-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/2.0.9/7cf2726fdcfbc8610f9a71fb3ed639871f315340/slf4j-api-2.0.9.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/2.0.9/97e46b94d70f47892145e09d685461245584d596/slf4j-api-2.0.9-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-batch-service/6.8.0/69a9949fa0691912acd7683e4871edfec839c2db/flowable-batch-service-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-batch-service/6.8.0/6d7e91d138bdff5156c5a59997bd89fc0d20e0c2/flowable-batch-service-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-cmmn-engine/6.8.0/43c3ac46ca7ecbb1628d8a339bbdc3c93f986bab/flowable-cmmn-engine-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-cmmn-engine/6.8.0/1ec58b0db4b45ae54a61e75e4dd1b2cf338258c0/flowable-cmmn-engine-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-form-json-converter/6.8.0/d7c4e16c2d850bd102ecb03e5acb4841594e875f/flowable-form-json-converter-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-form-json-converter/6.8.0/ece76dc3e62e7415c6eb3c8d8e785ca6fce7b30f/flowable-form-json-converter-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.5.3.Final/c88fc1d8a96d4c3491f55d4317458ccad53ca663/jboss-logging-3.5.3.Final.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.5.3.Final/ec17333664730b9485400f9d2c3a9092e60bdbaf/jboss-logging-3.5.3.Final-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.liquibase/liquibase-core/4.24.0/e671a64b481f57f3f08dd3a8aa81e84f7ac25f1b/liquibase-core-4.24.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.liquibase/liquibase-core/4.24.0/297c0d6865faad5d3e90c6746a5298b08dc1367e/liquibase-core-4.24.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-content-spring-configurator/6.8.0/9829f32f06e86b1a63ebca7006c09c19a7665f/flowable-content-spring-configurator-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-content-spring-configurator/6.8.0/cda3a7fc39038c2616d7d840eb938c7942d57099/flowable-content-spring-configurator-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-spring-boot-starter-process/6.8.0/c057f6f944d203a3d649ed4661eaff78aa973b8f/flowable-spring-boot-starter-process-6.8.0.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-form-api/6.8.0/1d4e8422c75e07af74eb0f9fa66c469b7826e4b5/flowable-form-api-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-form-api/6.8.0/1141958e708ae3c887771fd324441086e34d4c87/flowable-form-api-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-idm-engine-configurator/6.8.0/64c11d5285d1bdaaf36fcfcbca8889222202ea56/flowable-idm-engine-configurator-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-idm-engine-configurator/6.8.0/f3d9d7a3f889b2f920d91d75dc37ad4dabc3127f/flowable-idm-engine-configurator-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-cmmn-image-generator/6.8.0/addf5d6e9d0cf8516d0ca1bd365d6e52015a0019/flowable-cmmn-image-generator-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-cmmn-image-generator/6.8.0/117d9f35108def4b34d547ebfe38dd356f17b68a/flowable-cmmn-image-generator-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4-runtime/4.10.1/10839f875928f59c622d675091d51a43ea0dc5f7/antlr4-runtime-4.10.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4-runtime/4.10.1/a5214c71b2fa1d776d69674bf75eeb3f1fee8a62/antlr4-runtime-4.10.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-variable-service-api/6.8.0/4b1c69fad2d8f7f3e98e0610c416c5682052f23/flowable-variable-service-api-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-variable-service-api/6.8.0/6c37e64c27624c57e81a7b3ac1bea7bf050830b/flowable-variable-service-api-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-idm-spring/6.8.0/548dd1e2984bcfede73b32f85de59017e88ae769/flowable-idm-spring-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-idm-spring/6.8.0/581893f010c5128e9173e69c8b00d30fd3a7f9b8/flowable-idm-spring-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/6.1.1/66cb0e08770d4523ae3976b0b791cde767466c61/spring-aop-6.1.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/6.1.1/6e38793c6f2fb08afa6d8712a63be8bebd923065/spring-aop-6.1.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/3.2.0/54998ab18f16e8d3a6e46c3d326f2de41c0b1ce0/spring-boot-starter-logging-3.2.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/3.2.0/b71b86840c8201606ee6d1093958ac8afe41b986/spring-boot-starter-logging-3.2.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.16.0/4e3eb3d79888d76b54e28b350915b5dc3919c9de/commons-codec-1.16.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.16.0/57c67a979689051a455570196d0f48134db9909e/commons-codec-1.16.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/6.1.1/6af88af13193acf2197bc0a42f0ec4e5c481bfe9/spring-beans-6.1.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/6.1.1/7a48fcd36752a8702b29e15a222bce4372b72d06/spring-beans-6.1.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-content-engine/6.8.0/c7806f2c0c048c806209c394876c1e7001043844/flowable-content-engine-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-content-engine/6.8.0/90f1594d9c349e6d18cc7f963bde9451b18350d5/flowable-content-engine-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.fasterxml.uuid/java-uuid-generator/3.3.0/1220f6ef3b9debfc201bde8efd5433b088b5d972/java-uuid-generator-3.3.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.fasterxml.uuid/java-uuid-generator/3.3.0/d1a4cd2938458f4801bd8cc12dd73a82f73a4fff/java-uuid-generator-3.3.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/3.2.0/4088ad23df91481bc7415cbfa068c423ccb7e54e/spring-boot-3.2.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/3.2.0/d3330ca3e30614a67199a8dbfa08b65ec265d332/spring-boot-3.2.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-idm-api/6.8.0/57c684dac3d56c9bfea8fc7db1558b5c01f3870/flowable-idm-api-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-idm-api/6.8.0/edf442c012a2a9297f7ebdb5fd0b9bbad961c4b6/flowable-idm-api-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/6.1.1/22d73bef97aff8a74a992716fe1aafc8f8a8a68d/spring-core-6.1.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/6.1.1/2b89fdace7991bb2c50328f9076c1c7b3f85930c/spring-core-6.1.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.13.0/b7263237aa89c1f99b327197c41d0669707a462e/commons-lang3-3.13.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.13.0/c035e3c80a649b8a1b2e533ff69317304accb247/commons-lang3-3.13.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-dmn-image-generator/6.8.0/91dec8725c85244aaad991a6ac71e48a23ab32a0/flowable-dmn-image-generator-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-dmn-image-generator/6.8.0/960f49e59adb4a31356a6564f71fbdd01a92e938/flowable-dmn-image-generator-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-dmn-model/6.8.0/53ed8c7a92398e37fd86b585a997f333fc86fd09/flowable-dmn-model-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-dmn-model/6.8.0/36d367d0077d9600c030a86fa90032979e39599b/flowable-dmn-model-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-engine/6.8.0/68a43ef50a9d697a60496f4225b51b007ab44bd5/flowable-engine-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-engine/6.8.0/3f382b094d135775f81c7b7e3d6c4b4835b1b232/flowable-engine-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-websocket/10.1.16/5c372739ee9409b47c474d8d47d276a7cd9bc2b/tomcat-embed-websocket-10.1.16.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-websocket/10.1.16/385898717ea85a86edf32f8289cd699b1c1e9d7b/tomcat-embed-websocket-10.1.16-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.hibernate.orm/hibernate-core/6.3.1.Final/1101d7e09e4853a110fd27a6f35c906f5709ac4f/hibernate-core-6.3.1.Final.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.hibernate.orm/hibernate-core/6.3.1.Final/7f46ccb21d7deab8e85fbc627c2a2c88be6e22f3/hibernate-core-6.3.1.Final-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-form-engine-configurator/6.8.0/e6d730841b436f39d82ba982275ad67cccc878e8/flowable-form-engine-configurator-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-form-engine-configurator/6.8.0/eb5cf18f9211a516ebf8a3c4503077a0dd5950ce/flowable-form-engine-configurator-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-form-model/6.8.0/bbc4d6922fe03c02058a969282d826994190493d/flowable-form-model-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-form-model/6.8.0/6d177696579e86b7615a0c4c0cbc0cda3cfdfb98/flowable-form-model-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-el/10.1.16/f057e54bfffe99df7f0d04cd4e688e55bf8a0da5/tomcat-embed-el-10.1.16.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-el/10.1.16/5ecc55f3dbaf5b11bf23169fd51468a6a62d8133/tomcat-embed-el-10.1.16-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-entitylink-service/6.8.0/a41f55dceb8afa8d860791ac8a8b15a2cca020b4/flowable-entitylink-service-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-entitylink-service/6.8.0/1e8814f680f280404b9561759b833ed19917aec1/flowable-entitylink-service-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/jakarta.transaction/jakarta.transaction-api/2.0.1/51a520e3fae406abb84e2e1148e6746ce3f80a1a/jakarta.transaction-api-2.0.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/jakarta.transaction/jakarta.transaction-api/2.0.1/660c982b9f5a7c8a6613c84f6e1c8b9221a4c574/jakarta.transaction-api-2.0.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-bpmn-model/6.8.0/936bab03e97f7b2acdbc7067c48239355e61ba81/flowable-bpmn-model-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-bpmn-model/6.8.0/4d09361667b3a5179e56d675474bffe9ccb8d60/flowable-bpmn-model-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.15.3/79baf4e605eb3bbb60b1c475d44a7aecceea1d60/jackson-annotations-2.15.3.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.15.3/b81b39665962a39168ed4be3ebd4d00f21fd2ac8/jackson-annotations-2.15.3-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/jakarta.persistence/jakarta.persistence-api/3.1.0/66901fa1c373c6aff65c13791cc11da72060a8d6/jakarta.persistence-api-3.1.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/jakarta.persistence/jakarta.persistence-api/3.1.0/8d479b8d71750d5c2b8e58034b80231994cba6ec/jakarta.persistence-api-3.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-engine-common-api/6.8.0/1984720f1ca75095dd3fca761c7e24005339cef3/flowable-engine-common-api-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-engine-common-api/6.8.0/8fd1b29d79ffedbad83f4a08f0a79a83b3c88771/flowable-engine-common-api-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/4.0.4/7180c50ef8bd127bb1dd645458b906cffcf6c2b5/jaxb-runtime-4.0.4.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/4.0.4/75f0097e2178e16ce462e7aec38f49ea578b99e3/jaxb-runtime-4.0.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/6.1.1/92f1f65c3d8ccee4a86cd8f85a446d99f2915833/spring-jdbc-6.1.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/6.1.1/fbdba039cb4797afdfb4959ede42b6d6b4f6a107/spring-jdbc-6.1.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/ecf26c7507d67782a3bbd148d170b31dfad001aa/commons-logging-1.2-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-spring-boot-autoconfigure/6.8.0/c7b8510c72c084b0d6cc72378eed31a8d0c4012b/flowable-spring-boot-autoconfigure-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-spring-boot-autoconfigure/6.8.0/78112ddcebb2c9b4006b97e126e4a41ac6d24db/flowable-spring-boot-autoconfigure-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-image-generator/6.8.0/e0a6b7f6ca600dd5f5f283048b5be17f13cef8ac/flowable-image-generator-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-image-generator/6.8.0/303e564466728bf2e919db846c178d76d4951c93/flowable-image-generator-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/3.2.0/59e49a0eca3d02c3dc593e7a881c19b932641894/spring-data-jpa-3.2.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/3.2.0/9abcff07f6a0d7afc18546c217f6ba91c46f9992/spring-data-jpa-3.2.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/4.1.2/18ec117c85f3ba0ac65409136afa8e42bc74e739/istack-commons-runtime-4.1.2.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/4.1.2/95757fed099f3293a3510c88a83a2f0b2985fe21/istack-commons-runtime-4.1.2-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-cmmn-spring/6.8.0/4d271035b40ae096bd765ae9eee56ef6987a3758/flowable-cmmn-spring-6.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.flowable/flowable-cmmn-spring/6.8.0/ab398a781f05764a0c84aa7351779b5318cdb456/flowable-cmmn-spring-6.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/3.3/1049c09f1de4331e8193e579448d0916d75b7631/objenesis-3.3.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/3.3/5fef34eeee6816b0ba2170755a8a9db7744990c3/objenesis-3.3-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.10.1/c8f15d4e99940c4564098af78c10809c00fdca06/junit-jupiter-params-5.10.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.10.1/1add8e4310a408675f46eae8acafe6b2b72232e5/junit-jupiter-params-5.10.1-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.xmlunit/xmlunit-core/2.9.1/e5833662d9a1279a37da3ef6f62a1da29fcd68c4/xmlunit-core-2.9.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.xmlunit/xmlunit-core/2.9.1/8ef88e77c158cdc17de55ad94e1e7e7972a91bd6/xmlunit-core-2.9.1-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/5.7.0/a1c258331ab91d66863c983aff7136357e9de056/mockito-core-5.7.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/5.7.0/1baa9a13c3471920b3319e4d0389a4745fd2ab08/mockito-core-5.7.0-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/3.24.2/ebbf338e33f893139459ce5df023115971c2786f/assertj-core-3.24.2.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/3.24.2/76c425ccc878f91e347fa3cb0d686772679b66e2/assertj-core-3.24.2-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/net.minidev/accessors-smart/2.5.0/aca011492dfe9c26f4e0659028a4fe0970829dd8/accessors-smart-2.5.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/net.minidev/accessors-smart/2.5.0/596cf1b2ac57a905102db8fb648c4080529f347f/accessors-smart-2.5.0-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.10.1/eb90c7d8bfaae8fdc97b225733fcb595ddd72843/junit-jupiter-api-5.10.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.10.1/b281dbb5921ce56b37b6e07a2502f663ca6c8db6/junit-jupiter-api-5.10.1-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/net.minidev/json-smart/2.5.0/57a64f421b472849c40e77d2e7cce3a141b41e99/json-smart-2.5.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/net.minidev/json-smart/2.5.0/7f51740e5d2aa84831af62084d5ae98a51fcb61d/json-smart-2.5.0-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/9.3/8e6300ef51c1d801a7ed62d07cd221aca3a90640/asm-9.3.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/9.3/ce26e415ccafa10c6624a07bdb38d969110f568f/asm-9.3-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.awaitility/awaitility/4.2.0/2c39784846001a9cffd6c6b89c78de62c0d80fb8/awaitility-4.2.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.awaitility/awaitility/4.2.0/359e52d6a80b3d12fb08b0e665f15ce334d2c7a3/awaitility-4.2.0-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/bf42d7e47a3228513b626dd7d37ac6f072aeca4f/android-json-0.0.20131108.vaadin1-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.skyscreamer/jsonassert/1.5.1/6d842d0faf4cf6725c509a5e5347d319ee0431c3/jsonassert-1.5.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.skyscreamer/jsonassert/1.5.1/56cfa73a7ab13fbb8d433570add90f087d40e243/jsonassert-1.5.1-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test-autoconfigure/3.2.0/4d096363d61b38f3a4151c3a4460e7cd92c52ca8/spring-boot-test-autoconfigure-3.2.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test-autoconfigure/3.2.0/f0fcbf4d3385b9a2cff4aef7cde11fdf2be0e6b6/spring-boot-test-autoconfigure-3.2.0-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-junit-jupiter/5.7.0/ac2d6a3431747a7986b8f4abef465f72bf3a21ae/mockito-junit-jupiter-5.7.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-junit-jupiter/5.7.0/5d3de2c05dc223dbb76d5d57125e529fe3623fec/mockito-junit-jupiter-5.7.0-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest/2.2/1820c0968dba3a11a1b30669bb1f01978a91dedc/hamcrest-2.2.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest/2.2/a0a13cfc629420efb587d954f982c4c6a100da25/hamcrest-2.2-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.3.0/152ea56b3a72f655d4fd677fc0ef2596c3dd5e6e/opentest4j-1.3.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.3.0/afb8ff23cffb021c56f333953aebfe6e8818568e/opentest4j-1.3.0-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.10/90ed94ac044ea8953b224304c762316e91fd6b31/byte-buddy-agent-1.14.10.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.10/8ab9eaf7d64ed2701ff334ce4bce157ad0ae825c/byte-buddy-agent-1.14.10-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.10.1/6c9ff773f9aa842b91d1f2fe4658973252ce2428/junit-jupiter-engine-5.10.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.10.1/624f71a8d76185f2ac8d234c686bbdab0bd28ae0/junit-jupiter-engine-5.10.1-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.10.1/f32ae4af74fde68414b8a3d2b7cf1fb43824a83a/junit-platform-engine-1.10.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.10.1/886c197f5fcfe9eaf0d1dde20aa1bd3abd653f44/junit-platform-engine-1.10.1-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test/3.2.0/6233f2d662826923cb87e8b659224c75cac6ed78/spring-boot-test-3.2.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test/3.2.0/bd33b3e9296721d33c0e3977312069340cd07414/spring-boot-test-3.2.0-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.jayway.jsonpath/json-path/2.8.0/b4ab3b7a9e425655a0ca65487bbbd6d7ddb75160/json-path-2.8.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/com.jayway.jsonpath/json-path/2.8.0/4cef8f7eaa1e056e5eae9bd000e43b342fdffda8/json-path-2.8.0-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.10.1/2bfcd4a4e38b10c671b6916d7e543c20afe25579/junit-platform-commons-1.10.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.10.1/ba681bcc1df2c719bf3b8ddb297e65eadb9d7499/junit-platform-commons-1.10.1-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.1.2/a231e0d844d2721b0fa1b238006d15c6ded6842a/apiguardian-api-1.1.2.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.1.2/e0787a997746ac32639e0bf3cb27af8dce8a3428/apiguardian-api-1.1.2-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/6.1.1/e86044a9b56e7c6860d643dd11b7b44624cce4a/spring-test-6.1.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/6.1.1/46b881a4c3521c93f0eb0da455e959ad418b8f97/spring-test-6.1.1-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-test/3.2.0/afe5dc428297302f6aefd118aedced224cf2b672/spring-boot-starter-test-3.2.0.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-test/3.2.0/494e8d8e2813217d12acafcc21c6bfee047de0b5/spring-boot-starter-test-3.2.0-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter/5.10.1/6e5c7dd668d6349cb99e52ab8321e73479a309bc/junit-jupiter-5.10.1.jar" sourcepath="/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter/5.10.1/4e79ee610aff59d79b5f229252ded392b7d48fd1/junit-jupiter-5.10.1-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
