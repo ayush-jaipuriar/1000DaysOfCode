@@ -20,6 +20,9 @@
       <module name="config-server.aotTest" options="-parameters" />
       <module name="config-server.main" options="-parameters" />
       <module name="config-server.test" options="-parameters" />
+      <module name="eureka_server" options="-parameters" />
+      <module name="eureka_server.main" options="-parameters" />
+      <module name="eureka_server.test" options="-parameters" />
       <module name="loans" options="-parameters" />
       <module name="loans.main" options="-parameters" />
       <module name="loans.test" options="-parameters" />
