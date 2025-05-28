@@ -22,6 +22,33 @@ spring:
     active:
       - "prod"
 
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka
+  instance:
+    prefer-ip-address: true
+
+info:
+  app:
+    name: "loans"
+    description: "Easy Bank Loans Application"
+    version: "1.0.0"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  info:
+    env:
+      enabled: true
+  endpoint:
+    shutdown:
+      enabled: true
+
 build:
   version: "3.0"
 
