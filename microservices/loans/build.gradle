@@ -44,6 +44,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.cloud:spring-cloud-starter-config'
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 	// The pom had spring-cloud-config-server, but for a client, spring-cloud-starter-config is correct.
 	// If this service IS also a config server (unlikely), this needs to be re-evaluated.
 
