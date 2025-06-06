@@ -1,6 +1,8 @@
 package com.drarc.accounts.service.impl;
 
+import com.drarc.accounts.dto.CustomerDetailsDto;
 import com.drarc.accounts.dto.CustomerDto;
+import com.drarc.accounts.dto.LoansDto;
 import com.drarc.accounts.entity.Accounts;
 import com.drarc.accounts.entity.Customer;
 import com.drarc.accounts.exception.CustomerAlreadyExistsException;
@@ -10,7 +12,9 @@ import com.drarc.accounts.mapper.CustomerMapper;
 import com.drarc.accounts.repository.AccountsRepository;
 import com.drarc.accounts.repository.CustomerRepository;
 import com.drarc.accounts.service.IAccountsService;
+import com.drarc.accounts.service.client.LoansFeignClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -21,12 +25,14 @@ import java.util.Random;
 public class AccountServiceImpl implements IAccountsService {
     private final AccountsRepository accountsRepository;
     private final CustomerRepository customerRepository;
+    private final LoansFeignClient loansFeignClient;
 
     // Constructor-based dependency injection for the repositories
     @Autowired
-    public AccountServiceImpl(AccountsRepository accountsRepository, CustomerRepository customerRepository) {
+    public AccountServiceImpl(AccountsRepository accountsRepository, CustomerRepository customerRepository, LoansFeignClient loansFeignClient) {
         this.accountsRepository = accountsRepository;
         this.customerRepository = customerRepository;
+        this.loansFeignClient = loansFeignClient;
     }
 
     // Method to create an account for a customer
@@ -64,7 +70,7 @@ public class AccountServiceImpl implements IAccountsService {
 
     // Method to fetch the account details for a customer based on their mobile number
     @Override
-    public CustomerDto fetchAccount(String mobileNumber) {
+    public CustomerDetailsDto fetchAccount(String mobileNumber) {
         // Fetch the customer by mobile number, or throw a ResourceNotFoundException if not found
         Customer customer = customerRepository.findByMobileNumber(mobileNumber)
                 .orElseThrow(() -> new ResourceNotFoundException("Customer", "mobileNumber", mobileNumber));
@@ -79,7 +85,14 @@ public class AccountServiceImpl implements IAccountsService {
         // Convert the Accounts entity to an AccountsDto and set it inside CustomerDto
         customerDto.setAccountsDto(AccountsMapper.mapAccountToDto(accounts));
 
-        // Return the populated CustomerDto
-        return customerDto;
+        ResponseEntity<LoansDto> loansDtoResponseEntity = loansFeignClient.fetchLoanDetails(mobileNumber);
+        CustomerDetailsDto customerDetailsDto = new CustomerDetailsDto();
+        customerDetailsDto.setCustomer(customerDto);
+        if(loansDtoResponseEntity != null) {
+            customerDetailsDto.setLoans(loansDtoResponseEntity.getBody());
+        }
+
+        // Return the populated CustomerDetailsDto
+        return customerDetailsDto;
     }
 }

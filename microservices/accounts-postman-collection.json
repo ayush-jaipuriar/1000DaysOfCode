@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "e8c3f2b1-b3e1-4f5a-8b8e-3ecb4b3b3e1a",
+		"name": "Accounts Microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Account",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@example.com\",\n    \"mobileNumber\": \"1234567890\"\n}"
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/create",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"create"
+					]
+				},
+				"description": "Creates a new customer and account. The mobile number must be unique."
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Account and Loan Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/fetch?mobileNumber=1234567890",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"fetch"
+					],
+					"query": [
+						{
+							"key": "mobileNumber",
+							"value": "1234567890"
+						}
+					]
+				},
+				"description": "Fetches account details for a customer, and also retrieves loan details from the Loans microservice."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Build Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/build-info",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"build-info"
+					]
+				},
+				"description": "Returns the build version of the accounts microservice."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Java Version",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/java-version",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"java-version"
+					]
+				},
+				"description": "Returns the Java version the accounts microservice is running on."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Contact Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/contact-info",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"contact-info"
+					]
+				},
+				"description": "Returns contact information for the accounts microservice from the configuration properties."
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:8080"
+		}
+	]
+} 

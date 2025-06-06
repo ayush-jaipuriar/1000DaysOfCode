@@ -2,6 +2,7 @@ package com.drarc.accounts.controller;
 
 import com.drarc.accounts.constants.AccountsConstants;
 import com.drarc.accounts.dto.AccountsContactInfoDto;
+import com.drarc.accounts.dto.CustomerDetailsDto;
 import com.drarc.accounts.dto.CustomerDto;
 import com.drarc.accounts.dto.ResponseDto;
 import com.drarc.accounts.service.IAccountsService;
@@ -58,9 +59,9 @@ public class AccountsController {
             @ApiResponse(responseCode = "200", description = "OK"),
             @ApiResponse(responseCode = "500", description = "Internal Server Error")
     })
-    public ResponseEntity<CustomerDto> fetchAccountDetails(@RequestParam @Pattern(regexp = "\\d{10}", message = "Mobile number must be 10 digits") String mobileNumber) {
-        CustomerDto customerDto = accountsService.fetchAccount(mobileNumber);
-        return ResponseEntity.status(HttpStatus.OK).body(customerDto);
+    public ResponseEntity<CustomerDetailsDto> fetchAccountDetails(@RequestParam @Pattern(regexp = "\\d{10}", message = "Mobile number must be 10 digits") String mobileNumber) {
+        CustomerDetailsDto customerDetailsDto = accountsService.fetchAccount(mobileNumber);
+        return ResponseEntity.status(HttpStatus.OK).body(customerDetailsDto);
     }
 
     @GetMapping("/build-info")
