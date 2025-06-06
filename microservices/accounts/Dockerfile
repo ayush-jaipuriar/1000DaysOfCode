@@ -1,14 +1,12 @@
-# Use the official OPENJDK 17 image as the base
-FROM openjdk:17-jdk-alpine
+# Use the official eclipse-temurin:17-jre-jammy image as the base
+FROM eclipse-temurin:17-jre-jammy
 
 # Set the working directory inside the container
 WORKDIR /app
 
 # Copy the executable JAR file from the host to the container
-COPY loans/target/loans-0.0.1-SNAPSHOT.jar app.jar
-
-# Expose the application port
-EXPOSE 8080
+ARG JAR_FILE=build/libs/accounts-0.0.1-SNAPSHOT.jar
+COPY ${JAR_FILE} app.jar
 
 # Define the entry point to run the JAR file
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]

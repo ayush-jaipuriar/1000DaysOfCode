@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  config-server:
+    build: ./config-server
+    container_name: config-server
+    ports:
+      - "8071:8071"
+    healthcheck:
+      test: "curl -f http://localhost:8071/actuator/health"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - microservices_network
+
+  eureka_server:
+    build: ./eureka_server
+    container_name: eureka-server
+    ports:
+      - "8070:8070"
+    depends_on:
+      config-server:
+        condition: service_healthy
+    environment:
+      - SPRING_CONFIG_IMPORT=configserver:http://config-server:8071
+    networks:
+      - microservices_network
+
+  accounts:
+    build: ./accounts
+    container_name: accounts-microservice
+    ports:
+      - "8080:8080"
+    depends_on:
+      - eureka_server
+    environment:
+      - SPRING_CONFIG_IMPORT=configserver:http://config-server:8071
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8070/eureka
+    networks:
+      - microservices_network
+
+  loans:
+    build: ./loans
+    container_name: loans-microservice
+    ports:
+      - "8090:8090"
+    depends_on:
+      - eureka_server
+    environment:
+      - SPRING_CONFIG_IMPORT=configserver:http://config-server:8071
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8070/eureka
+    networks:
+      - microservices_network
+
+networks:
+  microservices_network:
+    driver: bridge 
