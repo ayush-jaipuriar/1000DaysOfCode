@@ -23,20 +23,37 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8072/accounts/api/create",
+							"raw": "http://localhost:8072/easybank/accounts/api/create",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8072",
 							"path": [
+								"easybank",
 								"accounts",
 								"api",
 								"create"
 							]
 						}
 					},
-					"response": []
+					"response": [],
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"pm.test(\"Response header X-Response-Time is present\", function () {",
+									"    pm.response.to.have.header(\"X-Response-Time\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					]
 				},
 				{
 					"name": "Fetch Account Details",
@@ -44,13 +61,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8072/accounts/api/fetch?mobileNumber=1234567890",
+							"raw": "http://localhost:8072/easybank/accounts/api/fetch?mobileNumber=1234567890",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8072",
 							"path": [
+								"easybank",
 								"accounts",
 								"api",
 								"fetch"
@@ -63,10 +81,64 @@
 							]
 						}
 					},
-					"response": []
+					"response": [],
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response header X-Response-Time is present\", function () {",
+									"    pm.response.to.have.header(\"X-Response-Time\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					]
 				},
 				{
 					"name": "Get Build Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8072/easybank/accounts/api/build-info",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8072",
+							"path": [
+								"easybank",
+								"accounts",
+								"api",
+								"build-info"
+							]
+						}
+					},
+					"response": [],
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response header X-Response-Time is present\", function () {",
+									"    pm.response.to.have.header(\"X-Response-Time\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					]
+				},
+				{
+					"name": "Old Route (Should Fail)",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -84,49 +156,20 @@
 							]
 						}
 					},
-					"response": []
-				},
-				{
-					"name": "Get Java Version",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8072/accounts/api/java-version",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8072",
-							"path": [
-								"accounts",
-								"api",
-								"java-version"
-							]
+					"response": [],
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
 						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get Contact Info",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8072/accounts/api/contact-info",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8072",
-							"path": [
-								"accounts",
-								"api",
-								"contact-info"
-							]
-						}
-					},
-					"response": []
+					]
 				}
 			]
 		},
@@ -139,13 +182,14 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8072/loans/api/create?mobileNumber=1234567890",
+							"raw": "http://localhost:8072/easybank/loans/api/create?mobileNumber=1234567890",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8072",
 							"path": [
+								"easybank",
 								"loans",
 								"api",
 								"create"
@@ -158,7 +202,23 @@
 							]
 						}
 					},
-					"response": []
+					"response": [],
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"pm.test(\"Response header X-Response-Time is present\", function () {",
+									"    pm.response.to.have.header(\"X-Response-Time\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					]
 				},
 				{
 					"name": "Fetch Loan Details",
@@ -166,13 +226,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8072/loans/api/fetch?mobileNumber=1234567890",
+							"raw": "http://localhost:8072/easybank/loans/api/fetch?mobileNumber=1234567890",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8072",
 							"path": [
+								"easybank",
 								"loans",
 								"api",
 								"fetch"
@@ -185,7 +246,23 @@
 							]
 						}
 					},
-					"response": []
+					"response": [],
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response header X-Response-Time is present\", function () {",
+									"    pm.response.to.have.header(\"X-Response-Time\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					]
 				},
 				{
 					"name": "Update Loan Details",
@@ -239,27 +316,6 @@
 									"key": "mobileNumber",
 									"value": "1234567890"
 								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get Build Info",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8072/loans/api/build-info",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8072",
-							"path": [
-								"loans",
-								"api",
-								"build-info"
 							]
 						}
 					},
