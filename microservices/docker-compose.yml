@@ -54,6 +54,20 @@ services:
     networks:
       - microservices_network
 
+  gatewayserver:
+    build:
+      context: ./gatewayserver
+    container_name: gatewayserver-microservice
+    ports:
+      - "8072:8072"
+    depends_on:
+      - eureka_server
+    environment:
+      - SPRING_CONFIG_IMPORT=configserver:http://config-server:8071
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8070/eureka
+    networks:
+      - microservices_network
+
 networks:
   microservices_network:
     driver: bridge 

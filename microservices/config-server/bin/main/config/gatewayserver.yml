@@ -1,0 +1,32 @@
+server:
+  port: 8072
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    gateway:
+      enabled: true
+
+info:
+  app:
+    name: "Gateway Server"
+    description: "Gateway Server for the microservices"
+    version: "1.0.0" 
