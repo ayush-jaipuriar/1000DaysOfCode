@@ -13,6 +13,8 @@ import com.drarc.accounts.repository.AccountsRepository;
 import com.drarc.accounts.repository.CustomerRepository;
 import com.drarc.accounts.service.IAccountsService;
 import com.drarc.accounts.service.client.LoansFeignClient;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -23,6 +25,7 @@ import java.util.Random;
 
 @Service
 public class AccountServiceImpl implements IAccountsService {
+    private static final Logger logger = LoggerFactory.getLogger(AccountServiceImpl.class);
     private final AccountsRepository accountsRepository;
     private final CustomerRepository customerRepository;
     private final LoansFeignClient loansFeignClient;
@@ -70,7 +73,8 @@ public class AccountServiceImpl implements IAccountsService {
 
     // Method to fetch the account details for a customer based on their mobile number
     @Override
-    public CustomerDetailsDto fetchAccount(String mobileNumber) {
+    public CustomerDetailsDto fetchAccount(String mobileNumber, String correlationId) {
+        logger.debug("Inside fetch account method");
         // Fetch the customer by mobile number, or throw a ResourceNotFoundException if not found
         Customer customer = customerRepository.findByMobileNumber(mobileNumber)
                 .orElseThrow(() -> new ResourceNotFoundException("Customer", "mobileNumber", mobileNumber));
@@ -85,7 +89,7 @@ public class AccountServiceImpl implements IAccountsService {
         // Convert the Accounts entity to an AccountsDto and set it inside CustomerDto
         customerDto.setAccountsDto(AccountsMapper.mapAccountToDto(accounts));
 
-        ResponseEntity<LoansDto> loansDtoResponseEntity = loansFeignClient.fetchLoanDetails(mobileNumber);
+        ResponseEntity<LoansDto> loansDtoResponseEntity = loansFeignClient.fetchLoanDetails(correlationId, mobileNumber);
         CustomerDetailsDto customerDetailsDto = new CustomerDetailsDto();
         customerDetailsDto.setCustomer(customerDto);
         if(loansDtoResponseEntity != null) {

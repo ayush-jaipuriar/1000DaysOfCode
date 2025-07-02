@@ -5,5 +5,5 @@ import com.drarc.accounts.dto.CustomerDto;
 
 public interface IAccountsService {
     void createAccount(CustomerDto customerDto);
-    CustomerDetailsDto fetchAccount(String mobileNumber);
+    CustomerDetailsDto fetchAccount(String mobileNumber, String correlationId);
 }

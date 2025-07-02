@@ -34,7 +34,7 @@ eureka:
 info:
   app:
     name: "loans"
-    description: "Easy Bank Loans Application"
+    description: "Drarc Bank Loans Application"
     version: "1.0.0"
 
 management:
@@ -49,11 +49,15 @@ management:
     shutdown:
       enabled: true
 
+logging:
+  level:
+    com.drarc.loans: DEBUG
+
 build:
   version: "3.0"
 
 loans:
-  message: "Welcome to EazyBank loans related local APIs "
+  message: "Welcome to DrarcBank loans related local APIs "
   contactDetails:
     name: "Ayush Jaipuriar - Developer"
     email: "jaipuriar.ayush@gmail.com"

@@ -61,3 +61,11 @@ management:
     shutdown:
       enabled: true
 
+logging:
+  level:
+    com.drarc.accounts: DEBUG
+
+feign:
+  circuitbreaker:
+    enabled: true
+

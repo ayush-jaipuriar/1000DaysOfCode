@@ -5,7 +5,7 @@ plugins {
 	id 'com.google.cloud.tools.jib' version '3.4.2' // From pom.xml
 }
 
-group = 'com.eazybytes'
+group = 'com.drarc'
 version = '0.0.1-SNAPSHOT'
 
 java {
@@ -16,7 +16,7 @@ java {
 
 jib {
 	to {
-		image = "eazybytes/${project.name}:s6" // Using project.name for artifactId
+		image = "drarc/${project.name}:s6" // Using project.name for artifactId
 	}
 }
 
@@ -35,7 +35,7 @@ ext {
 }
 
 bootBuildImage {
-	imageName = "eazybytes/${project.name}:buildpack" // Using project.name for artifactId
+	imageName = "drarc/${project.name}:buildpack" // Using project.name for artifactId
 }
 
 dependencies {
