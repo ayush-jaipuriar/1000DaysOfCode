@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  accounts:
+    environment:
+      - SPRING_PROFILES_ACTIVE=qa
+  loans:
+    environment:
+      - SPRING_PROFILES_ACTIVE=qa 

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - LoansApplicationTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>LoansApplicationTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.drarc.loans.html">com.drarc.loans</a> &gt; LoansApplicationTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.248s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">contextLoads()</td>
+<td class="success">0.248s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>11:07:59.831 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.drarc.loans.LoansApplicationTests]: LoansApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:07:59.866 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.drarc.loans.LoansApplication for test class com.drarc.loans.LoansApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2025-07-06T11:08:00.151+05:30  INFO 25688 --- [loans] [    Test worker] com.drarc.loans.LoansApplicationTests    : Starting LoansApplicationTests using Java 21.0.7 with PID 25688 (started by ayushjaipuriar in /Users/ayushjaipuriar/Documents/GitHub/1000DaysOfCode/microservices/loans)
+2025-07-06T11:08:00.152+05:30 DEBUG 25688 --- [loans] [    Test worker] com.drarc.loans.LoansApplicationTests    : Running with Spring Boot v3.3.2, Spring v6.1.11
+2025-07-06T11:08:00.152+05:30  INFO 25688 --- [loans] [    Test worker] com.drarc.loans.LoansApplicationTests    : The following 1 profile is active: &quot;prod&quot;
+2025-07-06T11:08:00.164+05:30  INFO 25688 --- [loans] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8071
+2025-07-06T11:08:00.164+05:30  INFO 25688 --- [loans] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=loans, profiles=[default], label=null, version=null, state=null
+2025-07-06T11:08:00.164+05:30  INFO 25688 --- [loans] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8071
+2025-07-06T11:08:00.164+05:30  INFO 25688 --- [loans] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=loans, profiles=[prod], label=null, version=null, state=null
+2025-07-06T11:08:00.487+05:30  INFO 25688 --- [loans] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-06T11:08:00.530+05:30  INFO 25688 --- [loans] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interface.
+2025-07-06T11:08:00.594+05:30  INFO 25688 --- [loans] [    Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9f56b981-fbb4-3bbd-b91f-1d06679a9dd6
+2025-07-06T11:08:00.711+05:30  WARN 25688 --- [loans] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-07-06T11:08:00.712+05:30  WARN 25688 --- [loans] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-07-06T11:08:00.738+05:30  INFO 25688 --- [loans] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-06T11:08:00.789+05:30  INFO 25688 --- [loans] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-07-06T11:08:00.790+05:30  INFO 25688 --- [loans] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-06T11:08:00.826+05:30  INFO 25688 --- [loans] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-06T11:08:00.842+05:30  INFO 25688 --- [loans] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-06T11:08:00.850+05:30  INFO 25688 --- [loans] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-06T11:08:00.928+05:30  INFO 25688 --- [loans] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-06T11:08:00.942+05:30  WARN 25688 --- [loans] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-06T11:08:01.198+05:30  INFO 25688 --- [loans] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: alter table if exists loans alter column loan_id set data type bigint
+Hibernate: alter table if exists loans alter column created_at set data type timestamp(6)
+Hibernate: alter table if exists loans alter column created_by set data type varchar(255)
+Hibernate: alter table if exists loans alter column updated_at set data type timestamp(6)
+Hibernate: alter table if exists loans alter column updated_by set data type varchar(255)
+Hibernate: alter table if exists loans alter column loan_number set data type varchar(255)
+Hibernate: alter table if exists loans alter column loan_type set data type varchar(255)
+Hibernate: alter table if exists loans alter column mobile_number set data type varchar(255)
+2025-07-06T11:08:01.220+05:30  INFO 25688 --- [loans] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-06T11:08:01.463+05:30  WARN 25688 --- [loans] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-06T11:08:01.828+05:30  INFO 25688 --- [loans] [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-07-06T11:08:01.848+05:30  INFO 25688 --- [loans] [    Test worker] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-07-06T11:08:01.863+05:30  WARN 25688 --- [loans] [    Test worker] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-06T11:08:01.867+05:30  INFO 25688 --- [loans] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoints beneath base path '/actuator'
+2025-07-06T11:08:01.896+05:30  INFO 25688 --- [loans] [    Test worker] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-07-06T11:08:01.931+05:30  INFO 25688 --- [loans] [    Test worker] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-07-06T11:08:01.932+05:30  INFO 25688 --- [loans] [    Test worker] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-06T11:08:01.939+05:30  INFO 25688 --- [loans] [    Test worker] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-07-06T11:08:01.939+05:30  INFO 25688 --- [loans] [    Test worker] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-07-06T11:08:01.939+05:30  INFO 25688 --- [loans] [    Test worker] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-07-06T11:08:01.939+05:30  INFO 25688 --- [loans] [    Test worker] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-07-06T11:08:01.939+05:30  INFO 25688 --- [loans] [    Test worker] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-07-06T11:08:01.939+05:30  INFO 25688 --- [loans] [    Test worker] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-07-06T11:08:01.939+05:30  INFO 25688 --- [loans] [    Test worker] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-07-06T11:08:02.051+05:30  INFO 25688 --- [loans] [    Test worker] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-07-06T11:08:02.052+05:30  INFO 25688 --- [loans] [    Test worker] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-07-06T11:08:02.053+05:30  INFO 25688 --- [loans] [    Test worker] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-07-06T11:08:02.054+05:30  INFO 25688 --- [loans] [    Test worker] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1751780282054 with initial instances count: 2
+2025-07-06T11:08:02.056+05:30  INFO 25688 --- [loans] [    Test worker] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application LOANS with eureka with status UP
+2025-07-06T11:08:02.057+05:30  INFO 25688 --- [loans] [    Test worker] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1751780282057, current=UP, previous=STARTING]
+2025-07-06T11:08:02.057+05:30  INFO 25688 --- [loans] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LOANS/192.168.1.101:loans:8090: registering service...
+2025-07-06T11:08:02.066+05:30  INFO 25688 --- [loans] [    Test worker] com.drarc.loans.LoansApplicationTests    : Started LoansApplicationTests in 2.163 seconds (process running for 2.534)
+2025-07-06T11:08:02.072+05:30  INFO 25688 --- [loans] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LOANS/192.168.1.101:loans:8090 - registration status: 204
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>WARNING: A Java agent has been loaded dynamically (/Users/ayushjaipuriar/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.18/417558ea01fe9f0e8a94af28b9469d281c4e3984/byte-buddy-agent-1.14.18.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.10.2</a> at 06-Jul-2025, 11:08:02 am</p>
+</div>
+</div>
+</body>
+</html>

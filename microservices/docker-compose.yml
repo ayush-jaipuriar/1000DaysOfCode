@@ -20,6 +20,12 @@ services:
     container_name: eureka-server
     ports:
       - "8070:8070"
+    healthcheck:
+      test: "curl -f http://localhost:8070/actuator/health"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
     depends_on:
       config-server:
         condition: service_healthy
@@ -33,8 +39,15 @@ services:
     container_name: accounts-microservice
     ports:
       - "8080:8080"
+    healthcheck:
+      test: "curl -f http://localhost:8080/actuator/health"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
     depends_on:
-      - eureka_server
+      eureka_server:
+        condition: service_healthy
     environment:
       - SPRING_CONFIG_IMPORT=configserver:http://config-server:8071
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8070/eureka
@@ -46,8 +59,15 @@ services:
     container_name: loans-microservice
     ports:
       - "8090:8090"
+    healthcheck:
+      test: "curl -f http://localhost:8090/actuator/health"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
     depends_on:
-      - eureka_server
+      eureka_server:
+        condition: service_healthy
     environment:
       - SPRING_CONFIG_IMPORT=configserver:http://config-server:8071
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8070/eureka
@@ -61,7 +81,12 @@ services:
     ports:
       - "8072:8072"
     depends_on:
-      - eureka_server
+      eureka_server:
+        condition: service_healthy
+      accounts:
+        condition: service_healthy
+      loans:
+        condition: service_healthy
     environment:
       - SPRING_CONFIG_IMPORT=configserver:http://config-server:8071
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8070/eureka
