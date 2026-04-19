@@ -1,1 +1,56 @@
-/bin/
+# Generated build output
+bin/
+build/
+out/
+target/
+
+# Gradle
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Java
+*.class
+hs_err_pid*
+replay_pid*
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# IDEs and editors
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.classpath
+.project
+.settings/
+.factorypath
+
+# Logs
+*.log
+
+# Environment and local config
+.env
+.env.*
+!.env.example
+!.env.sample
+local.properties
+
+# Backups and patch leftovers
+*.bak
+*.backup
+*.tmp
+*.temp
+*.orig
+*.rej
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
