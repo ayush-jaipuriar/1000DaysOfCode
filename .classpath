@@ -981,5 +981,6 @@
 			<attribute name="gradle.buildServer" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="TUF"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

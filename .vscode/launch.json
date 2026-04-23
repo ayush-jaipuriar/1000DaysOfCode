@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ReverseArray",
+            "request": "launch",
+            "mainClass": "ReverseArray",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
+            "name": "PriorityQueueExample",
+            "request": "launch",
+            "mainClass": "PriorityQueueExample",
+            "projectName": "1000DaysOfCode"
+        },
+        {
+            "type": "java",
             "name": "NSECorporateDisclosureFetcher",
             "request": "launch",
             "mainClass": "TUF.NSECorporateDisclosureFetcher",
